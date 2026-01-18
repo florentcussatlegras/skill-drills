@@ -8,6 +8,7 @@ export default function SubjectList({ onChange }) {
     const [selected, setSelected] = useState([]);
 
     useEffect(() => {
+        console.log('ici api fetch subjects');
         fetch("/api/subjects")
             .then((res) => res.json())
             .then((data) => {
