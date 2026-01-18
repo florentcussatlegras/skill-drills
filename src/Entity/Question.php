@@ -1,5 +1,6 @@
 <?php
 // src/Entity/Question.php
+
 namespace App\Entity;
 
 use App\Repository\QuestionRepository;

@@ -2,36 +2,37 @@ import { useState } from "react";
 
 import { Card, CardHeader, CardTitle, CardContent } from "./ui/card";
 import { Separator } from "./ui/separator";
-
+import { Button } from "./ui/button";
 
 export default function QuestionCard({ question, onNext }) {
     const [showAnswer, setShowAnswer] = useState(false);
 
-    if (!question) return <p>Aucune question trouvée</p>;
+    if (!question) {
+        return (
+            <div className="text-gray-500 text-lg">Sélectionne une matière</div>
+        );
+    }
 
     return (
-        <>Question here</>
-        // <Card className="p-4 w-full">
-        //     <CardHeader>
-        //         <CardTitle>{question.subject.name}</CardTitle>
-        //     </CardHeader>
-        //     <CardContent>
-        //         <p className="text-lg font-medium">{question.label}</p>
-        //         <Separator className="my-4" />
-        //         <div className={`overflow-hidden transition-all duration-300 ${
-        //             showAnswer ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-        //         }`}>
-        //             {showAnswer && (
-        //                 <p className="text-gray-700 mt-2">{question.answer}</p>
-        //             )}
-        //         </div>
-        //         <div className="mt-4 flex gap-2">
-        //             <Button onClick={() => setShowAnswer(!showAnswer)}>
-        //                 {showAnswer ? "Masquer la réponse" : "Voir la réponse"}
-        //             </Button>
-        //             <Button onClick={onNext}>Question suivante</Button>
-        //         </div>
-        //     </CardContent>
-        // </Card>
+        <div className="bg-white rounded-2xl shadow-lg p-6 max-w-xl w-full">
+            <h2 className="text-2xl font-semibold text-gray-900" dangerouslySetInnerHTML={{ __html: question.label }} />
+
+            <p className="my-8 text-gray-700 leading-relaxed">
+                <div dangerouslySetInnerHTML={{ __html: question.answer }} />
+            </p>
+
+            <div className="mt-6 flex justify-end gap-3">
+                <button className="px-4 py-2 rounded-lg bg-gray-200 hover:bg-gray-300">
+                    Masquer
+                </button>
+
+                <button
+                    onClick={onNext}
+                    className="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700"
+                >
+                    Suivante
+                </button>
+            </div>
+        </div>
     );
 }

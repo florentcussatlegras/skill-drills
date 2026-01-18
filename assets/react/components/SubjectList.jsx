@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import { Button } from "./ui/button";
+import Checkbox from "./ui/checkbox";
 
 export default function SubjectList({ onChange }) {
     const [subjects, setSubjects] = useState([]);
@@ -30,8 +31,7 @@ export default function SubjectList({ onChange }) {
     );
 
     return (
-        <div className="flex flex-col p-2 gap-2 items-center border-r border-gray-300 overflow-y-auto max-h-screen">
-            <h3 className="font-bold mb-2">Matières</h3>
+        <div className="flex flex-col p-2 gap-2 items-center overflow-y-auto max-h-screen">
             <div className="flex gap-2 mb-2">
                 <Button
                     className="px-2 py-1 border rounded"
@@ -63,7 +63,6 @@ export default function SubjectList({ onChange }) {
                     />
                 </label>
             ))}
-            ;
         </div>
     );
 }

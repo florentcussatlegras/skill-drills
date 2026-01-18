@@ -9,6 +9,7 @@
         "@symfony/ux-react": "file:vendor/symfony/ux-react/assets",
         "@symfony/ux-turbo": "file:vendor/symfony/ux-turbo/assets",
         "@symfony/webpack-encore": "^5.1.0",
+        "@tailwindcss/typography": "^0.5.19",
         "@vitejs/plugin-react": "^5.1.2",
         "core-js": "^3.38.0",
         "regenerator-runtime": "^0.13.9",
@@ -25,6 +26,9 @@
         "build": "encore production --progress"
     },
     "dependencies": {
+        "@fontsource/inter": "^5.2.8",
+        "@fontsource/space-grotesk": "^5.2.10",
+        "@headlessui/react": "^2.2.9",
         "@radix-ui/react-separator": "^1.1.8",
         "@radix-ui/react-slot": "^1.2.4",
         "@tailwindcss/postcss": "^4.1.18",
