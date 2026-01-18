@@ -7,7 +7,7 @@ export default function SubjectCard({ subject, selected, onToggle }) {
         rounded-lg cursor-pointer
         ${selected ? "bg-neutral-200" : "bg-neutral-100"}
         transition-colors duration-200
-        relative
+        relative hover:bg-neutral-200
       `}
         >
             <img
