@@ -29,7 +29,7 @@ export default function SubjectList({ onChange }) {
     );
 
     return (
-        <div className="flex flex-col p-2 gap-2 items-center overflow-y-auto max-h-screen pb-6">
+        <div className="flex flex-col p-2 gap-2 items-center overflow-y-auto max-h-screen pb-8">
             <div className="flex gap-2 mb-2">
                 <Button
                     className={`px-3 py-1 rounded border transition
