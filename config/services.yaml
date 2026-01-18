@@ -25,4 +25,4 @@ services:
     # please note that last definitions always *replace* previous ones
     App\Service\DataService:
         arguments:
-            $dataPath: "%site_base_url%/public/data" 
+            $dataPath: "%site_base_url%/data" 
