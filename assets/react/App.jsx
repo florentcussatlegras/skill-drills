@@ -27,9 +27,8 @@ export default function App() {
             <img
                 src="/images/logo.png"
                 alt="Q/A Tech Logo"
-                className="h-10 w-auto absolute left-2 top-2"
+                className="h-24 w-auto absolute left-2 top-2"
             />
-
 
             {/* Sidebar */}
             <aside
