@@ -1,6 +1,8 @@
-import { fetchRandomQuestion } from "../components/api";
-import SubjectList from "../components/SubjectList";
-import QuestionCard from "../components/QuestionCard";
+import { useEffect, useState } from "react";
+
+import { fetchRandomQuestion } from "./components/api";
+import SubjectList from "./components/SubjectList";
+import QuestionCard from "./components/QuestionCard";
 
 export default function App() {
     const [selectedSubjects, setSelectedSubjects] = useState([]);

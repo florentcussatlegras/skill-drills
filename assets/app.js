@@ -1,4 +1,4 @@
-import { registerReactControllerComponents } from '@symfony/ux-react';
+// import { registerReactControllerComponents } from '@symfony/ux-react';
 import './stimulus_bootstrap.js';
 /*
  * Welcome to your app's main JavaScript file!
@@ -9,5 +9,9 @@ import './stimulus_bootstrap.js';
 
 // any CSS you import will output into a single css file (app.css in this case)
 import './styles/app.css';
+import './react/main.jsx';
 
-registerReactControllerComponents(require.context('./react/controllers', true, /\.(j|t)sx?$/));
+console.log('This log comes from assets/app.js - welcome to Webpack Encore! 🎉');
+
+
+// registerReactControllerComponents(require.context('./controllers', true, /\.(j|t)sx?$/));
