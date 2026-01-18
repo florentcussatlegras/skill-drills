@@ -10,7 +10,7 @@ export default function QuestionCard({ question, onNext }) {
     }
 
     return (
-        <div className="bg-white rounded-2xl shadow-lg p-6 max-w-xl w-full">
+        <div className="bg-white rounded-2xl shadow-lg p-6 w-full xl:w-1/2">
             <h2 className="text-xl font-semibold text-gray-500">{ question.subjectName }</h2>
             <h2
                 className="text-2xl font-semibold text-gray-900"

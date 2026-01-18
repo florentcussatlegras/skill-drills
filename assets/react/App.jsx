@@ -24,17 +24,16 @@ export default function App() {
     }, [selectedSubjects]);
 
     return (
-        <div className="flex flex-col md:flex-row h-screen bg-gray-100">
+        <div className="bg-gray-100 flex flex-col h-screen">
             {/* Sidebar */}
             <aside
                 className="
-        w-full md:w-96
-        flex flex-col items-center justify-center
+        w-full
+        py-8
         bg-white
-        p-4
-        md:h-full
-        max-h-[40vh] md:max-h-full
+        max-h-[40svh] md:max-h-none
         overflow-y-auto
+        border-b md:border-b-0 md:border-r
     "
             >
                 <SubjectList onChange={setSelectedSubjects} />
@@ -43,9 +42,11 @@ export default function App() {
             {/* Main */}
             <main
                 className="
-        flex-1
-        flex items-center justify-center
-        p-4 md:p-6
+        w-full
+        h-full
+        flex flex-col items-center justify-center
+        md:p-6
+        min-h-[60svh] md:min-h-0
     "
             >
                 <QuestionCard question={question} onNext={loadQuestion} />
