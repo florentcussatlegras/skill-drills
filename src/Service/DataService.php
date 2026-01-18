@@ -14,6 +14,7 @@ class DataService
 
     public function getSubjects(): array
     {
+        dump($this->dataPath);
         $file = $this->dataPath . '/subjects.json';
         return json_decode(file_get_contents($file), true);
     }
