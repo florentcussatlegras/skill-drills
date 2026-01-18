@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "JavaScript",
+    "logo": "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/javascript.svg"
+  },
+  {
+    "id": 2,
+    "name": "PHP",
+    "logo": "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/php.svg"
+  },
+  {
+    "id": 3,
+    "name": "ReactJS",
+    "logo": "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/react.svg"
+  },
+  {
+    "id": 4,
+    "name": "NextJS",
+    "logo": "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/nextdotjs.svg"
+  },
+  {
+    "id": 5,
+    "name": "Docker",
+    "logo": "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/docker.svg"
+  },
+  {
+    "id": 6,
+    "name": "Symfony",
+    "logo": "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/symfony.svg"
+  }
+]

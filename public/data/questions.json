@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "label": "Que veut dire PHP ?",
+    "answer": "PHP signifie 'PHP: Hypertext Preprocessor'.",
+    "subjectId": 2
+  },
+  {
+    "id": 2,
+    "label": "PHP est-il un langage compilé ou interprété ?",
+    "answer": "PHP est un langage interprété.",
+    "subjectId": 2
+  },
+  {
+    "id": 3,
+    "label": "PHP est-il typé faiblement ou fortement ? Dynamique ou statique ?",
+    "answer": "PHP est faiblement typé et dynamique.",
+    "subjectId": 2
+  },
+  {
+    "id": 4,
+    "label": "Quelle est la différence entre echo et print ?",
+    "answer": "Les deux affichent du texte, mais echo peut prendre plusieurs arguments et ne retourne rien, print retourne toujours 1.",
+    "subjectId": 2
+  },
+  {
+    "id": 5,
+    "label": "Quelle est la différence entre isset() et empty() ?",
+    "answer": "isset() vérifie si une variable est définie et non null, empty() vérifie si elle est vide (0, '', null, false).",
+    "subjectId": 2
+  },
+  {
+    "id": 6,
+    "label": "Comment déclarer une constante en PHP ?",
+    "answer": "On utilise define('NOM', 'valeur'); ou const NOM = 'valeur';",
+    "subjectId": 2
+  },
+  {
+    "id": 7,
+    "label": "Quelle est la différence entre == et === ?",
+    "answer": "== compare les valeurs après conversion de type, === compare les valeurs et le type.",
+    "subjectId": 2
+  },
+  {
+    "id": 8,
+    "label": "Comment créer une fonction anonyme en PHP ?",
+    "answer": "$func = function() { return 'hello'; };",
+    "subjectId": 2
+  },
+  {
+    "id": 9,
+    "label": "Qu'est-ce qu'une variable superglobale ?",
+    "answer": "$_GET, $_POST, $_SERVER sont des variables superglobales accessibles dans n'importe quel contexte.",
+    "subjectId": 2
+  },
+  {
+    "id": 10,
+    "label": "Comment démarrer un script PHP en ligne de commande ?",
+    "answer": "php nom_script.php",
+    "subjectId": 2
+  },
+  {
+    "id": 11,
+    "label": "Quelle est la différence entre include et require ?",
+    "answer": "include émet un warning si le fichier n'existe pas, require émet une erreur fatale.",
+    "subjectId": 2
+  },
+  {
+    "id": 12,
+    "label": "Quelle est la différence entre include_once et require_once ?",
+    "answer": "Ils ne ré-incluent le fichier que s'il n'a pas déjà été inclus, la différence entre include/require reste la même.",
+    "subjectId": 2
+  },
+  {
+    "id": 13,
+    "label": "Comment gérer une exception en PHP ?",
+    "answer": "Avec try { ... } catch (Exception $e) { ... }.",
+    "subjectId": 2
+  },
+  {
+    "id": 14,
+    "label": "Qu’est-ce qu’une fonction en PHP ?",
+    "answer": "Une fonction est un bloc de code réutilisable qui effectue une tâche précise et peut retourner une valeur.",
+    "subjectId": 2
+  },
+  {
+    "id": 15,
+    "label": "Comment PHP gère-t-il la mémoire ?",
+    "answer": "PHP utilise un garbage collector basé sur le comptage de références pour libérer la mémoire automatiquement en fin de script.",
+    "subjectId": 2
+  },
+  {
+    "id": 16,
+    "label": "Comment se protéger des injections SQL ?",
+    "answer": "En utilisant des requêtes préparées avec PDO ou MySQLi, en liant les paramètres et en évitant toute concaténation directe des entrées utilisateur.",
+    "subjectId": 2
+  },
+  {
+    "id": 17,
+    "label": "Comment créer un tableau associatif ?",
+    "answer": "$arr = ['clé1' => 'valeur1', 'clé2' => 'valeur2'];",
+    "subjectId": 2
+  },
+  {
+    "id": 18,
+    "label": "A quoi sert printf ?",
+    "answer": "printf affiche du texte formaté. Il fonctionne comme en C, avec des placeholders (%s, %d, %f, etc.) pour insérer des variables dans une chaîne.",
+    "subjectId": 2
+  },
+  {
+    "id": 19,
+    "label": "Quelle est la différence entre == et === pour les tableaux ?",
+    "answer": "== compare le contenu (valeurs et clés) après conversion de type, === compare aussi l'ordre et les types exactement.",
+    "subjectId": 2
+  },
+  {
+    "id": 20,
+    "label": "Comment déclarer une fonction avec un argument par défaut ?",
+    "answer": "function add($a, $b = 10) { return $a + $b; }",
+    "subjectId": 2
+  },
+  {
+    "id": 21,
+    "label": "Quelle est la différence entre GET et POST ?",
+    "answer": "GET envoie des données dans l’URL (moins sécurisé, limité en taille). POST envoie des données dans le corps de la requête (plus sécurisé, pas de limite de taille).",
+    "subjectId": 2
+  },
+  {
+    "id": 21,
+    "label": "Qu’est-ce que PDO et pourquoi l’utiliser ?",
+    "answer": "PDO (PHP Data Objects) est une interface pour accéder aux bases de données. Il permet d’utiliser des requêtes préparées, sécurise contre les injections SQL et est compatible avec plusieurs types de bases.",
+    "subjectId": 2
+  },
+  {
+    "id": 22,
+    "label": "Qu’est-ce qu’une session en PHP ?",
+    "answer": "Une session stocke des informations utilisateur côté serveur, persistantes pendant la navigation, identifiées par un session_id.",
+    "subjectId": 2
+  },
+  {
+    "id": 22,
+    "label": "Qu’est-ce le typage dynamique ?",
+    "answer": "Le type d’une variable est déterminé à l’exécution, pas au moment de l’écriture du code..",
+    "subjectId": 2
+  },
+  {
+    "id": 23,
+    "label": "Qu’est-ce le typage faible ?",
+    "answer": "PHP convertit automatiquement les types quand c’est nécessaire. Il essaie de “deviner” ce que tu veux faire, même si les types ne correspondent pas.",
+    "subjectId": 2
+  }
+]

@@ -5,11 +5,13 @@ namespace App\Service;
 
 class DataService
 {
+    private string $projectDir;
     private string $dataPath;
 
-    public function __construct(string $dataPath)
+    public function __construct(string $projectDir)
     {
-        $this->dataPath = $dataPath;
+        $this->projectDir = $projectDir;
+        $this->dataPath = $this->projectDir . '/data';
     }
 
     public function getSubjects(): array
