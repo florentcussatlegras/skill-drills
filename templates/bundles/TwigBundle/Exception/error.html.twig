@@ -2,10 +2,12 @@
 
 {% block body %}
 
-    ERREUR
+    {{ status_code }} {{ status_text }}
 
-    Une erreur s'est produite
+    {% block content %}      
+        Une erreur s'est produite
+    {% endblock %}
 
-    <button class="bg-blue-500">Revenir à l'accueil</button>
+   <a href={{ path('app_home') }} class="bg-blue-500">Revenir à l'accueil</a>
     
 {% endblock %}

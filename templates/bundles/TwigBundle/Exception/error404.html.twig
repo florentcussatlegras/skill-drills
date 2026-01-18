@@ -1,11 +1,7 @@
-{% extends "base.html.twig" %}
+{% extends "bundles/TwigBundle/Exception/error.html.twig" %}
 
-{% block body %}
-
-    4{{ status_code }} {{ status_text }}
+{% block content %}
 
     La page n'existe pas
-
-    <button class="bg-blue-500">Revenir à l'accueil</button>
     
 {% endblock %}

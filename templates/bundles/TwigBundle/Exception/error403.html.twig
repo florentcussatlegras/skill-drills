@@ -1,11 +1,7 @@
-{% extends "base.html.twig" %}
+{% extends "bundles/TwigBundle/Exception/error.html.twig" %}
 
-{% block body %}
+{% block content %}
 
-    4{{ status_code }} {{ status_text }}
+    Vous n'êtes pas authorisé à accéder à cette page
 
-    VOus n'êtes pas authorisé à accéder à cette page
-
-    <button class="bg-blue-500">Revenir à l'accueil</button>
-    
 {% endblock %}
