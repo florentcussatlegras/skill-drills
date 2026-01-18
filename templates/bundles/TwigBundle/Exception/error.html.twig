@@ -8,11 +8,11 @@
                 {{ status_code }} {{ status_text }}
             </h1>
 
-            {% block content %}
-                <p class="text-gray-600 mb-6">
+             <p class="text-gray-600 mb-6">
+                {% block content %}
                     Une erreur s'est produite
-                </p>
-            {% endblock %}
+                {% endblock %}
+            </p>
 
             <!-- Bouton / lien retour accueil -->
             <a href="{{ path('app_home') }}" class="inline-block bg-sky-500 hover:bg-sky-600 text-white font-semibold py-2 px-6 rounded-lg transition-colors">
