@@ -1,6 +1,3 @@
-import React from "react";
-import { CheckIcon } from "@heroicons/react/24/solid"; // icône par défaut
-
 export default function SubjectCard({ subject, selected, onToggle }) {
     return (
         <div

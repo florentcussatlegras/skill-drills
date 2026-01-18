@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
 import { Button } from "./ui/button";
-import Checkbox from "./ui/checkbox";
 import SubjectCard from "./SubjectCard";
 
 export default function SubjectList({ onChange }) {
@@ -8,11 +7,9 @@ export default function SubjectList({ onChange }) {
     const [selected, setSelected] = useState([]);
 
     useEffect(() => {
-        console.log('ici api fetch subjects 2');
         fetch("/api/subjects")
             .then((res) => res.json())
             .then((data) => {
-                console.log(data);
                 setSubjects(data);
             });
     }, []);
@@ -32,7 +29,7 @@ export default function SubjectList({ onChange }) {
     );
 
     return (
-        <div className="flex flex-col p-2 gap-2 items-center overflow-y-auto max-h-screen">
+        <div className="flex flex-col p-2 gap-2 items-center overflow-y-auto max-h-screen mb-6">
             <div className="flex gap-2 mb-2">
                 <Button
                     className={`px-3 py-1 rounded border transition

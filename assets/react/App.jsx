@@ -14,8 +14,6 @@ export default function App() {
             return;
         }
         const q = await fetchRandomQuestion(selectedSubjects);
-        console.log(selectedSubjects);
-        console.log(q);
         setQuestion(q);
     };
 
