@@ -22,7 +22,15 @@ export default function App() {
     }, [selectedSubjects]);
 
     return (
-        <div className="bg-gray-100 flex flex-col h-screen">
+        <div className="bg-gray-100 flex flex-col h-screen relative">
+
+            <img
+                src="/public/images/logo.png"
+                alt="Q/A Tech Logo"
+                className="h-10 w-auto abolute left-2 top-2"
+            />
+
+
             {/* Sidebar */}
             <aside
                 className="
