@@ -14,10 +14,19 @@ class DataService
 
     public function getSubjects(): array
     {
-        // $file = $this->dataPath . '/subjects.json';
-        $file = "https://skill-drills-production.up.railway.app/data/subjects.json";
-        dd($file);
-        return json_decode(file_get_contents($file), true);
+        $file = $this->dataPath . '/subjects.json';
+
+        if (!file_exists($file)) {
+            throw new \RuntimeException("Fichier subjects.json introuvable : $file");
+        }
+
+        $content = file_get_contents($file);
+
+        if ($content === false) {
+            throw new \RuntimeException("Impossible de lire le fichier : $file");
+        }
+
+        return json_decode($content, true);
     }
 
     public function getQuestions(): array
