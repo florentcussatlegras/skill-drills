@@ -28,14 +28,14 @@ export default function QuestionCard({ question, onNext }) {
             <div className="mt-6 flex justify-end gap-3">
                 <button
                     onClick={() => setShowAnswer(!showAnswer)}
-                    className="px-4 py-2 rounded-lg bg-gray-200 hover:bg-gray-300"
+                    className="px-4 py-2 rounded-lg bg-[#4FC3F7] hover:bg-[#29B0E0]"
                 >
                     {showAnswer ? "Masquer" : "Afficher"}
                 </button>
 
                 <button
                     onClick={onNext}
-                    className="px-4 py-2 rounded-lg bg-[#0F3D91] text-white hover:bg-blue-700"
+                    className="px-4 py-2 rounded-lg bg-[#0F3D91] text-white hover:bg-[#0B2C6D]"
                 >
                     Question suivante
                 </button>
