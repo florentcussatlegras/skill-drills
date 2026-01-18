@@ -16,6 +16,7 @@ class DataService
     {
         // $file = $this->dataPath . '/subjects.json';
         $file = "https://skill-drills-production.up.railway.app/data/subjects.json";
+        dd($file);
         return json_decode(file_get_contents($file), true);
     }
 
