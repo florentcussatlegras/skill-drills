@@ -12,6 +12,7 @@ export default function SubjectList({ onChange }) {
         fetch("/api/subjects")
             .then((res) => res.json())
             .then((data) => {
+                console.log(data);
                 setSubjects(data);
             });
     }, []);
