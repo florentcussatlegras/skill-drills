@@ -28,7 +28,7 @@ export default function QuestionCard({ question, onNext }) {
             <div className="mt-6 flex justify-end gap-3">
                 <button
                     onClick={() => setShowAnswer(!showAnswer)}
-                    className="px-4 py-2 rounded-lg bg-[#4FC3F7] hover:bg-[#29B0E0]"
+                    className="px-4 py-2 rounded-lg bg-[#4FC3F7] hover:bg-[#29B0E0] text-white"
                 >
                     {showAnswer ? "Masquer" : "Afficher"}
                 </button>
