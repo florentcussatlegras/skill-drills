@@ -18,6 +18,7 @@ class QuestionApiController extends AbstractController
     #[Route('/subjects', name: 'api_subjects', methods: ['GET'])]
     public function subjects(): JsonResponse
     {
+        dd('la');
         return $this->json($this->dataService->getSubjects());
     }
 
