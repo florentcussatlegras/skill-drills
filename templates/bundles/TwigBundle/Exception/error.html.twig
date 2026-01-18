@@ -1,13 +1,23 @@
 {% extends "base.html.twig" %}
 
 {% block body %}
+    <div class="flex items-center justify-center min-h-screen bg-gray-100 p-4">
+        <div class="bg-white rounded-2xl shadow-lg p-8 max-w-md w-full text-center">
+            <!-- Status code et texte -->
+            <h1 class="text-3xl font-bold text-gray-800 mb-4">
+                {{ status_code }} {{ status_text }}
+            </h1>
 
-    {{ status_code }} {{ status_text }}
+            {% block content %}
+                <p class="text-gray-600 mb-6">
+                    Une erreur s'est produite
+                </p>
+            {% endblock %}
 
-    {% block content %}      
-        Une erreur s'est produite
-    {% endblock %}
-
-   <a href={{ path('app_home') }} class="bg-blue-500">Revenir à l'accueil</a>
-    
+            <!-- Bouton / lien retour accueil -->
+            <a href="{{ path('app_home') }}" class="inline-block bg-sky-500 hover:bg-sky-600 text-white font-semibold py-2 px-6 rounded-lg transition-colors">
+                Revenir à l'accueil
+            </a>
+        </div>
+    </div>
 {% endblock %}
