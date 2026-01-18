@@ -35,9 +35,9 @@ export default function QuestionCard({ question, onNext }) {
 
                 <button
                     onClick={onNext}
-                    className="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700"
+                    className="px-4 py-2 rounded-lg bg-[#0F3D91] text-white hover:bg-blue-700"
                 >
-                    Suivante
+                    Question suivante
                 </button>
             </div>
         </div>
