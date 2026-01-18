@@ -29,6 +29,7 @@
         "@fontsource/inter": "^5.2.8",
         "@fontsource/space-grotesk": "^5.2.10",
         "@headlessui/react": "^2.2.9",
+        "@heroicons/react": "^2.2.0",
         "@radix-ui/react-separator": "^1.1.8",
         "@radix-ui/react-slot": "^1.2.4",
         "@tailwindcss/postcss": "^4.1.18",

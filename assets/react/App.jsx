@@ -24,17 +24,30 @@ export default function App() {
     }, [selectedSubjects]);
 
     return (
-        <div className="flex h-screen bg-gray-100">
+        <div className="flex flex-col md:flex-row h-screen bg-gray-100">
             {/* Sidebar */}
-            <aside className="w-96 flex flex-col items-center bg-white p-4 overflow-y-auto">
-                <h1 className="font-nunito-sans text-6xl font-bold mb-24 text-gray-900">
-                    SkillDrill
-                </h1>
+            <aside
+                className="
+        w-full md:w-96
+        flex flex-col items-center justify-center
+        bg-white
+        p-4
+        md:h-full
+        max-h-[40vh] md:max-h-full
+        overflow-y-auto
+    "
+            >
                 <SubjectList onChange={setSelectedSubjects} />
             </aside>
 
             {/* Main */}
-            <main className="flex-1 flex items-center justify-center p-6">
+            <main
+                className="
+        flex-1
+        flex items-center justify-center
+        p-4 md:p-6
+    "
+            >
                 <QuestionCard question={question} onNext={loadQuestion} />
             </main>
         </div>

@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { Button } from "./ui/button";
 import Checkbox from "./ui/checkbox";
+import SubjectCard from "./SubjectCard";
 
 export default function SubjectList({ onChange }) {
     const [subjects, setSubjects] = useState([]);
@@ -11,8 +12,6 @@ export default function SubjectList({ onChange }) {
             .then((res) => res.json())
             .then((data) => {
                 setSubjects(data);
-                setSelected(data.map((s) => s.id));
-                onChange(data.map((s) => s.id));
             });
     }, []);
 
@@ -34,7 +33,12 @@ export default function SubjectList({ onChange }) {
         <div className="flex flex-col p-2 gap-2 items-center overflow-y-auto max-h-screen">
             <div className="flex gap-2 mb-2">
                 <Button
-                    className="px-2 py-1 border rounded"
+                    className={`px-3 py-1 rounded border transition
+        ${
+            selected.length === subjects.length
+                ? "bg-blue-600 text-white border-blue-600"
+                : "bg-white text-gray-700 border-gray-300 hover:bg-gray-100"
+        }`}
                     onClick={() => {
                         const allIds = subjects.map((s) => s.id);
                         setSelected(allIds);
@@ -43,8 +47,14 @@ export default function SubjectList({ onChange }) {
                 >
                     Tous
                 </Button>
+
                 <Button
-                    className="px-2 py-1 border rounded"
+                    className={`px-3 py-1 rounded border transition
+        ${
+            selected.length === 0
+                ? "bg-red-600 text-white border-red-600"
+                : "bg-white text-gray-700 border-gray-300 hover:bg-gray-100"
+        }`}
                     onClick={() => {
                         setSelected([]);
                         onChange([]);
@@ -53,16 +63,16 @@ export default function SubjectList({ onChange }) {
                     Aucun
                 </Button>
             </div>
-            {subjects.map((s) => (
-                <label key={s.id} className="flex items-center gap-2">
-                    <Checkbox
+            <div className="grid grid-cols-2 gap-4">
+                {subjects.map((s) => (
+                    <SubjectCard
                         key={s.id}
-                        label={s.name}
-                        checked={selected.includes(s.id)}
+                        subject={s}
+                        selected={selected.includes(s.id)}
                         onToggle={() => toggle(s.id)}
                     />
-                </label>
-            ))}
+                ))}
+            </div>
         </div>
     );
 }
