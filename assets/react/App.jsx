@@ -46,7 +46,7 @@ export default function App() {
             {/* Main */}
             <main
                 className="
-                    bg-gray-100
+                    bg-white
                     w-full
                     h-full
                     flex flex-col items-center justify-center
