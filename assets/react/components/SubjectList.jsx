@@ -35,7 +35,7 @@ export default function SubjectList({ onChange }) {
                     className={`px-3 py-1 rounded border transition
         ${
             selected.length === subjects.length
-                ? "bg-blue-600 text-white border-blue-600"
+                ? "bg-[#0F3D91] text-white"
                 : "bg-white text-gray-700 border-gray-300 hover:bg-gray-100"
         }`}
                     onClick={() => {
