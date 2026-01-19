@@ -3,12 +3,12 @@ export default function SubjectCard({ subject, selected, onToggle }) {
         <div
             onClick={onToggle}
             className={`
-        w-full md:w-20 h-20 flex flex-col items-center justify-center
-        rounded-lg cursor-pointer
-        ${selected ? "bg-neutral-200" : "bg-neutral-100"}
-        transition-colors duration-200
-        relative hover:bg-neutral-200
-      `}
+                w-full md:w-20 h-20 flex flex-col items-center justify-center
+                rounded-lg cursor-pointer
+                ${selected ? "bg-neutral-200" : "bg-neutral-100"}
+                transition-colors duration-200
+                relative hover:bg-neutral-200
+            `}
         >
             <img
                 src={subject.logo}

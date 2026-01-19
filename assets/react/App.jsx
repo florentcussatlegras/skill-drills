@@ -22,21 +22,23 @@ export default function App() {
     }, [selectedSubjects]);
 
     return (
-        <div className="bg-gray-100 flex flex-col h-screen relative">
-            <img
-                src="/images/logo.png"
-                alt="Q/A Tech Logo"
-                className="h-24 w-auto absolute left-2 top-2"
-            />
+        <div className="bg-white flex flex-col h-screen relative">
+            <div className="flex h-26 absolute justify-center w-full md:w-auto md:left-2 top-0 bg-white z-30">
+                <img
+                    src="/images/logo.png"
+                    alt="Q/A Tech Logo"
+                    className="h-24"
+                />
+               </div>
             {/* Sidebar */}
             <aside
                 className="
+                    mt-24 md:mt-0
                     w-full
                     py-8
                     bg-white
                     max-h-[40svh] md:max-h-none
                     overflow-y-auto
-                    border-b md:border-b-0 md:border-r
                 "
             >
                 <SubjectList onChange={setSelectedSubjects} />
@@ -44,6 +46,7 @@ export default function App() {
             {/* Main */}
             <main
                 className="
+                    bg-gray-100
                     w-full
                     h-full
                     flex flex-col items-center justify-center

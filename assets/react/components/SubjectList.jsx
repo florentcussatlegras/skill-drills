@@ -62,7 +62,7 @@ export default function SubjectList({ onChange }) {
                     Aucun
                 </Button>
             </div>
-            <div className="flex justify-around gap-4 w-full">
+            <div className="flex flex-col md:flex-row justify-around gap-4 w-full md:max-w-xl">
                 {subjects.map((s) => (
                     <SubjectCard
                         key={s.id}
