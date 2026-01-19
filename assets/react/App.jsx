@@ -23,36 +23,33 @@ export default function App() {
 
     return (
         <div className="bg-gray-100 flex flex-col h-screen relative">
-
             <img
                 src="/images/logo.png"
                 alt="Q/A Tech Logo"
                 className="h-24 w-auto absolute left-2 top-2"
             />
-
             {/* Sidebar */}
             <aside
                 className="
-        w-full
-        py-8
-        bg-white
-        max-h-[40svh] md:max-h-none
-        overflow-y-auto
-        border-b md:border-b-0 md:border-r
-    "
+                    w-full
+                    py-8
+                    bg-white
+                    max-h-[40svh] md:max-h-none
+                    overflow-y-auto
+                    border-b md:border-b-0 md:border-r
+                "
             >
                 <SubjectList onChange={setSelectedSubjects} />
             </aside>
-
             {/* Main */}
             <main
                 className="
-        w-full
-        h-full
-        flex flex-col items-center justify-center
-        md:p-6
-        min-h-[60svh] md:min-h-0
-    "
+                    w-full
+                    h-full
+                    flex flex-col items-center justify-center
+                    md:p-6
+                    min-h-[60svh] md:min-h-0
+                "
             >
                 <QuestionCard question={question} onNext={loadQuestion} />
             </main>
