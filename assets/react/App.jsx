@@ -23,7 +23,7 @@ export default function App() {
 
     return (
         <div className="bg-white flex flex-col h-screen relative">
-            <div className="flex h-26 absolute justify-center w-full md:w-auto md:left-2 top-0 bg-white z-30">
+            <div className="flex h-26 absolute justify-center w-full md:w-auto md:left-2 top-0 md:top-2 bg-white z-30">
                 <img
                     src="/images/logo.png"
                     alt="Q/A Tech Logo"
