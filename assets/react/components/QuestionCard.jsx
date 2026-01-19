@@ -3,6 +3,10 @@ import { useState } from "react";
 export default function QuestionCard({ question, onNext }) {
     const [showAnswer, setShowAnswer] = useState(false);
 
+    useEffect(() => {
+        setShowAnswer(false);
+    }, [question]);
+
     if (!question) {
         return (
             <div className="text-gray-500 text-lg">Sélectionnez une matière</div>
