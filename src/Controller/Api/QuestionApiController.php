@@ -24,9 +24,21 @@ class QuestionApiController extends AbstractController
     #[Route('/questions/random', name: 'api_random_question', methods: ['GET'])]
     public function randomQuestion(Request $request): JsonResponse
     {
-        dd('la');
-        $subjectIds = $request->query->all('subjects');
+        $subjectIds = $request->query->all('subjects'); // récupère TOUS les sujets
+        if (!is_array($subjectIds)) {
+            $subjectIds = [$subjectIds]; // forcer un tableau
+        }
 
-        return $this->json($this->dataService->getRandomQuestion($subjectIds));
+        $subjectIds = array_filter($subjectIds, fn($id) => $id !== null);
+
+        try {
+            $question = $this->dataService->getRandomQuestion($subjectIds);
+            if (!$question) {
+                return $this->json(['error' => 'Aucune question trouvée'], 404);
+            }
+            return $this->json($question);
+        } catch (\Exception $e) {
+            return $this->json(['error' => 'Erreur serveur'], 500);
+        }
     }
 }
