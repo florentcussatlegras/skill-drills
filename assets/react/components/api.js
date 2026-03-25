@@ -9,7 +9,7 @@ export async function fetchRandomQuestion(subjectIds = []) {
   subjectIds.forEach(id => params.append('subjects[]', id));
 
   try {
-    const res = await fetch('/api/questions/random?' + params);
+    const res = await fetch('https://qa-tech.up.railway.app/api/questions/random?' + params);
     if (!res.ok) {
       const errorData = await res.json();
       console.error('Erreur API:', errorData);
