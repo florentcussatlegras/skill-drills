@@ -39,7 +39,6 @@ class DataService
 
     public function getRandomQuestion(array $subjectIds = []): ?array
     {
-        dd($subjectIds);
         $questions = $this->getQuestions();
         $subjects  = $this->getSubjects();
 
