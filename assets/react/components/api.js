@@ -10,11 +10,14 @@ export async function fetchRandomQuestion(subjectIds = []) {
 
   try {
     const res = await fetch('https://qa-tech.up.railway.app/api/questions/random?' + params);
+
     if (!res.ok) {
-      const errorData = await res.json();
-      console.error('Erreur API:', errorData);
+      const text = await res.text(); // lire la réponse brute
+      console.error('Erreur API:', res.status, text);
       return null;
     }
+
+    // OK, on peut parser le JSON
     return res.json();
   } catch (err) {
     console.error('Erreur fetch:', err);
