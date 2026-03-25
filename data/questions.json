@@ -150,121 +150,121 @@
     "subjectId": 2
   }
   {
-    "id": 1,
+    "id": 24,
     "label": "Que veut dire JavaScript ?",
     "answer": "JavaScript est un langage de programmation orienté web, initialement appelé LiveScript.",
     "subjectId": 1
   },
   {
-    "id": 2,
+    "id": 25,
     "label": "JavaScript est-il un langage compilé ou interprété ?",
     "answer": "JavaScript est un langage interprété par le navigateur ou l'environnement d'exécution.",
     "subjectId": 1
   },
   {
-    "id": 3,
+    "id": 26,
     "label": "JavaScript est-il typé faiblement ou fortement ? Dynamique ou statique ?",
     "answer": "JavaScript est faiblement typé et dynamique.",
     "subjectId": 1
   },
   {
-    "id": 4,
+    "id": 27,
     "label": "Quelle est la différence entre var, let et const ?",
     "answer": "var est fonctionnellement scoped, let et const sont block scoped ; const ne peut pas être réassigné.",
     "subjectId": 1
   },
   {
-    "id": 5,
+    "id": 28,
     "label": "Quelle est la différence entre == et === ?",
     "answer": "== compare après conversion de type, === compare strictement sans conversion.",
     "subjectId": 1
   },
   {
-    "id": 6,
+    "id": 29,
     "label": "Qu'est-ce qu'une fonction fléchée ?",
     "answer": "Une fonction fléchée est une syntaxe compacte pour écrire une fonction, qui n'a pas son propre 'this'.",
     "subjectId": 1
   },
   {
-    "id": 7,
+    "id": 30,
     "label": "Qu'est-ce qu'une promesse en JavaScript ?",
     "answer": "Une promesse représente la réussite ou l'échec futur d'une opération asynchrone.",
     "subjectId": 1
   },
   {
-    "id": 8,
+    "id": 31,
     "label": "Quelle est la différence entre null et undefined ?",
     "answer": "null est une valeur assignée signifiant 'absence de valeur', undefined signifie que la variable n'a pas été initialisée.",
     "subjectId": 1
   },
   {
-    "id": 9,
+    "id": 32,
     "label": "Qu'est-ce que le DOM en JavaScript ?",
     "answer": "Le DOM (Document Object Model) est une interface qui représente la structure HTML ou XML d'une page.",
     "subjectId": 1
   },
   {
-    "id": 10,
+    "id": 33,
     "label": "Qu'est-ce qu'un callback ?",
     "answer": "Un callback est une fonction passée en argument à une autre fonction pour être exécutée plus tard.",
     "subjectId": 1
   },
   {
-    "id": 11,
+    "id": 34,
     "label": "Quelle est la différence entre les objets et les tableaux en JavaScript ?",
     "answer": "Les objets stockent des paires clé/valeur, les tableaux sont des listes ordonnées d'éléments.",
     "subjectId": 1
   },
   {
-    "id": 12,
+    "id": 35,
     "label": "Qu'est-ce que 'this' en JavaScript ?",
     "answer": "'this' fait référence à l'objet depuis lequel la fonction est appelée, mais son comportement dépend du contexte.",
     "subjectId": 1
   },
   {
-    "id": 13,
+    "id": 36,
     "label": "Quelle est la différence entre fonction déclarée et fonction anonyme ?",
     "answer": "Une fonction déclarée a un nom et peut être appelée avant sa définition, une fonction anonyme est souvent stockée dans une variable.",
     "subjectId": 1
   },
   {
-    "id": 14,
+    "id": 37,
     "label": "Qu'est-ce que le hoisting en JavaScript ?",
     "answer": "Le hoisting déplace les déclarations de variables et fonctions en haut de leur scope lors de l'exécution.",
     "subjectId": 1
   },
   {
-    "id": 15,
+    "id": 38,
     "label": "Qu'est-ce qu'un module en JavaScript ?",
     "answer": "Un module est un fichier qui exporte du code (fonctions, objets, variables) pour être réutilisé dans d'autres fichiers.",
     "subjectId": 1
   },
   {
-    "id": 16,
+    "id": 39,
     "label": "Quelle est la différence entre async et defer dans un script HTML ?",
     "answer": "async charge et exécute le script dès qu'il est prêt, defer charge le script en parallèle mais l'exécute après le parsing du HTML.",
     "subjectId": 1
   },
   {
-    "id": 17,
+    "id": 40,
     "label": "Qu'est-ce que le 'strict mode' en JavaScript ?",
     "answer": "'use strict' active un mode strict qui empêche certaines erreurs silencieuses et impose de meilleures pratiques.",
     "subjectId": 1
   },
   {
-    "id": 18,
+    "id": 41,
     "label": "Quelle est la différence entre un objet Set et un tableau ?",
     "answer": "Un Set est une collection de valeurs uniques, tandis qu'un tableau peut contenir des doublons et est ordonné.",
     "subjectId": 1
   },
   {
-    "id": 19,
+    "id": 42,
     "label": "Qu'est-ce que l'Event Loop ?",
     "answer": "L'Event Loop gère l'exécution des callbacks et des promesses, permettant à JavaScript d'être non bloquant.",
     "subjectId": 1
   },
   {
-    "id": 20,
+    "id": 43,
     "label": "Quelle est la différence entre call, apply et bind ?",
     "answer": "call et apply invoquent immédiatement la fonction avec un contexte, bind retourne une nouvelle fonction liée au contexte.",
     "subjectId": 1
