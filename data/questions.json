@@ -148,7 +148,7 @@
     "label": "Qu’est-ce le typage faible ?",
     "answer": "PHP convertit automatiquement les types quand c’est nécessaire. Il essaie de “deviner” ce que tu veux faire, même si les types ne correspondent pas.",
     "subjectId": 2
-  }
+  },
   {
     "id": 24,
     "label": "Que veut dire JavaScript ?",
