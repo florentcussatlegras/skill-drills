@@ -24,6 +24,7 @@ class QuestionApiController extends AbstractController
     #[Route('/questions/random', name: 'api_random_question', methods: ['GET'])]
     public function randomQuestion(Request $request): JsonResponse
     {
+        dd('la');
         $subjectIds = $request->query->all('subjects');
 
         return $this->json($this->dataService->getRandomQuestion($subjectIds));
