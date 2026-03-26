@@ -734,7 +734,7 @@
   {
     "id": 120,
     "label": "Pourquoi utilise-t-on getServerSideProps et getStaticProps dans /pages et pas dans /app ?",
-    "answer": "Dans /pages :\n- Les composants React normaux ne peuvent pas être async, donc on ne peut pas faire await fetch(...) directement dans la fonction de composant.\n- Pour récupérer des données côté serveur avant le rendu, Next.js a créé :\n  • getServerSideProps → fetch à chaque requête (SSR)\n  • getStaticProps → fetch au moment du build (SSG / ISR avec revalidate)\n\nDans /app :\n- Les composants peuvent être Server Components async, donc on peut faire await fetch() directement.\n- getServerSideProps et getStaticProps ne sont plus nécessaires ici.",
+    "answer": "### Dans `/pages`\n\n- Les composants React **normaux ne peuvent pas être `async`**, donc on ne peut pas faire `await fetch(...)` directement dans la fonction de composant.\n- Pour récupérer des données côté serveur avant le rendu, Next.js a créé :\n  - **`getServerSideProps`** → fetch à chaque requête (SSR)\n  - **`getStaticProps`** → fetch au moment du build (SSG / ISR avec `revalidate`)\n\n### Dans `/app`\n\n- Les composants peuvent être **Server Components `async`**, donc on peut faire `await fetch()` directement.\n- **`getServerSideProps`** et **`getStaticProps`** ne sont plus nécessaires ici.",
     "subjectId": 4
   }
 ]
