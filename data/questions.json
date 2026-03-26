@@ -724,5 +724,11 @@
     "label": "Quelle est la différence entre getServerSideProps et getStaticProps dans Next.js ?",
     "answer": "getServerSideProps :\n- S’exécute à chaque requête (côté serveur).\n- Les données sont toujours à jour.\n- Idéal pour du contenu dynamique (ex : dashboard, données utilisateur).\n\ngetStaticProps :\n- S’exécute au moment du build (génération du site).\n- Les pages sont pré-générées (statiques) → très rapides.\n- Idéal pour du contenu qui change peu (blog, pages marketing).",
     "subjectId": 4
+  },
+  {
+    "id": 119,
+    "label": "Quelle est la différence entre SSR, SSG et ISR dans Next.js ?",
+    "answer": "SSR utilise getServerSideProps pour générer la page à chaque requête.\nSSG utilise getStaticProps pour générer la page au moment du build.\nISR est une extension de SSG qui ajoute une régénération automatique des pages après un certain délai grâce à revalidate.",
+    "subjectId": 4
   }
 ]
