@@ -22,7 +22,7 @@ export default function App() {
     }, [selectedSubjects]);
 
     return (
-        <div className="bg-white flex flex-col relative">
+        <div className="bg-white flex flex-col min-h-screen relative">
             <div className="flex h-26 absolute justify-center w-full md:w-auto md:left-2 top-0 md:top-2 bg-white z-30">
                 <img
                     src="/images/logo.png"
