@@ -700,5 +700,23 @@
     "label": "Quand utiliser un Server Component plutôt qu'un Client Component ?",
     "answer": "On utilise un Server Component pour le data fetching et la performance, et un Client Component pour les interactions utilisateur.",
     "subjectId": 3
+  },
+  {
+    "id": 115,
+    "label": "Comment faire du SSR (Server-Side Rendering) dans le dossier app avec fetch ?",
+    "answer": "Pour du SSR, on peut utiliser un Server Component async avec fetch et exporter 'export const revalidate = 0;'. La page est générée à chaque requête, garantissant que les données sont toujours fraîches. Exemple :\n\nexport const revalidate = 0;\nexport default async function Page() {\n  const res = await fetch('https://api.example.com/data');\n  const data = await res.json();\n  return <div>{data.title}</div>;\n}",
+    "subjectId": 4
+  },
+  {
+    "id": 116,
+    "label": "Comment faire du SSG (Static Site Generation) dans le dossier app avec fetch ?",
+    "answer": "Pour du SSG, on peut utiliser un Server Component async avec fetch et exporter 'export const revalidate = false;'. La page est générée une seule fois au build et jamais régénérée. Exemple :\n\nexport const revalidate = false;\nexport default async function Page() {\n  const res = await fetch('https://api.example.com/data', { next: { revalidate: false } });\n  const data = await res.json();\n  return <div>{data.title}</div>;\n}",
+    "subjectId": 4
+  },
+  {
+    "id": 117,
+    "label": "Comment faire de l'ISR (Incremental Static Regeneration) dans le dossier app avec fetch ?",
+    "answer": "Pour de l'ISR, on utilise un Server Component async avec fetch et on définit 'export const revalidate = X;' où X est le nombre de secondes pour la régénération. La page est générée statiquement au build et régénérée automatiquement en arrière-plan toutes les X secondes. Exemple :\n\nexport const revalidate = 60;\nexport default async function Page() {\n  const res = await fetch('https://api.example.com/data', { next: { revalidate: 60 } });\n  const data = await res.json();\n  return <div>{data.title}</div>;\n}",
+    "subjectId": 4
   }
 ]
