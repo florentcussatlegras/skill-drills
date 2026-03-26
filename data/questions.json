@@ -452,7 +452,7 @@
   {
     "id": 73,
     "label": "Qu'est-ce qu'un layout dans Next.js ?",
-    "answer": "Un layout est un composant partagé entre plusieurs pages pour structurer l'interface.",
+    "answer": "Un layout est un composant réutilisable dans Next.js, nommé layout.tsx, qui définit la structure commune de plusieurs pages (comme l’en-tête, le pied de page, la barre de navigation ou la sidebar). Il permet de centraliser l’interface partagée, d’assurer la cohérence visuelle et de simplifier la maintenance du code.",
     "subjectId": 4
   },
   {
