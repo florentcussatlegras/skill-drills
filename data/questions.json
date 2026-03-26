@@ -404,7 +404,7 @@
   {
     "id": 65,
     "label": "Qu'est-ce que le SSR dans Next.js ?",
-    "answer": "Le SSR (Server-Side Rendering) consiste à générer la page côté serveur à chaque requête.",
+    "answer": "Le SSR (Server-Side Rendering) dans Next.js consiste à générer la page côté serveur à **chaque requête**, de manière à fournir des données toujours à jour et à améliorer le SEO.\n\nExemple avec le Pages Router (`pages/`):\n```ts\n// pages/index.tsx\nexport async function getServerSideProps() {\n  const res = await fetch('https://jsonplaceholder.typicode.com/posts/1');\n  const post = await res.json();\n\n  return { props: { post } };\n}\n\nexport default function HomePage({ post }) {\n  return (\n    <div>\n      <h1>{post.title}</h1>\n      <p>{post.body}</p>\n    </div>\n  );\n}\n```\n\nExemple avec le App Router (`app/`):\n```ts\n// app/page.tsx\nexport default async function HomePage() {\n  const res = await fetch('https://jsonplaceholder.typicode.com/posts/1', { cache: 'no-store' });\n  const post = await res.json();\n\n  return (\n    <div>\n      <h1>{post.title}</h1>\n      <p>{post.body}</p>\n    </div>\n  );\n}\n```\n\nDans les deux cas, la page est générée **côté serveur à chaque requête**, mais avec le App Router, on n’a plus besoin de `getServerSideProps`, le fetch côté serveur suffit.",
     "subjectId": 4
   },
   {
