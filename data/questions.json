@@ -428,7 +428,7 @@
   {
     "id": 69,
     "label": "Qu'est-ce que getServerSideProps ?",
-    "answer": "C'est une fonction qui permet de récupérer des données côté serveur à chaque requête.\n\nExemple :\n<pre><code>export async function getServerSideProps(context) {\n  const res = await fetch('https://api.example.com/posts');\n  const posts = await res.json();\n\n  return {\n    props: { posts }, // sera passé au composant de page\n  };\n}\n\nexport default function Page({ posts }) {\n  return (\n    &lt;ul&gt;\n      {posts.map(p =&gt; &lt;li key={p.id}&gt;{p.title}&lt;/li&gt;)}\n    &lt;/ul&gt;\n  );\n}</code></pre>",
+    "answer": "C'est une fonction qui permet de récupérer des données côté serveur à chaque requête.\n\n<br><br>Exemple :<br><br>\n<pre><code>export async function getServerSideProps(context) {\n  const res = await fetch('https://api.example.com/posts');\n  const posts = await res.json();\n\n  return {\n    props: { posts }, // sera passé au composant de page\n  };\n}\n\nexport default function Page({ posts }) {\n  return (\n    &lt;ul&gt;\n      {posts.map(p =&gt; &lt;li key={p.id}&gt;{p.title}&lt;/li&gt;)}\n    &lt;/ul&gt;\n  );\n}</code></pre>",
     "subjectId": 4
   },
   {
