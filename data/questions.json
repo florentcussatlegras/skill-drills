@@ -634,5 +634,71 @@
     "label": "Quelle est la différence entre useEffect et useLayoutEffect ?",
     "answer": "useEffect s'exécute après le rendu du composant, tandis que useLayoutEffect s'exécute juste avant l'affichage dans le DOM et peut bloquer le rendu.",
     "subjectId": 3
+  },
+  {
+    "id": 104,
+    "label": "Pourquoi Suspense ne fonctionne pas avec useEffect ?",
+    "answer": "Parce que Suspense fonctionne avec des composants async côté serveur, alors que useEffect s'exécute côté client après le rendu.",
+    "subjectId": 3
+  },
+  {
+    "id": 105,
+    "label": "Qu'est-ce qu'une erreur d'hydration en React/Next.js ?",
+    "answer": "C'est une différence entre le HTML généré côté serveur et celui généré côté client, souvent due à des valeurs dynamiques comme Date.now ou Math.random.",
+    "subjectId": 3
+  },
+  {
+    "id": 106,
+    "label": "Pourquoi utiliser le SSR plutôt que le CSR ?",
+    "answer": "Le SSR permet d'améliorer le SEO et d'afficher du contenu immédiatement sans attendre le JavaScript côté client.",
+    "subjectId": 3
+  },
+  {
+    "id": 107,
+    "label": "Quelle est la différence entre le routing pages et app dans Next.js ?",
+    "answer": "Le dossier pages utilise l'ancien système de routing, tandis que app introduit les Server Components, layouts et le streaming.",
+    "subjectId": 3
+  },
+  {
+    "id": 108,
+    "label": "Pourquoi remonter le state (lifting state up) en React ?",
+    "answer": "Pour partager des données entre plusieurs composants enfants via un parent commun.",
+    "subjectId": 3
+  },
+  {
+    "id": 109,
+    "label": "Pourquoi useCallback peut être inutile ?",
+    "answer": "Parce qu'il n'apporte aucun gain si le composant enfant n'est pas mémorisé avec React.memo.",
+    "subjectId": 3
+  },
+  {
+    "id": 110,
+    "label": "Pourquoi un useEffect peut créer une boucle infinie ?",
+    "answer": "Parce qu'une dépendance modifiée dans le useEffect relance ce dernier en boucle.",
+    "subjectId": 3
+  },
+  {
+    "id": 111,
+    "label": "Pourquoi un middleware Next.js peut ne pas fonctionner ?",
+    "answer": "Parce qu'il doit être placé à la racine et correspondre aux routes ciblées.",
+    "subjectId": 3
+  },
+  {
+    "id": 112,
+    "label": "Pourquoi une image peut ne pas charger avec next/image ?",
+    "answer": "Parce que le domaine de l'image n'est pas autorisé dans next.config.js.",
+    "subjectId": 3
+  },
+  {
+    "id": 113,
+    "label": "Pourquoi dynamic import peut ne pas fonctionner correctement ?",
+    "answer": "Parce qu'il peut être mal configuré avec le SSR ou utilisé avec un composant nécessitant le client.",
+    "subjectId": 3
+  },
+  {
+    "id": 114,
+    "label": "Quand utiliser un Server Component plutôt qu'un Client Component ?",
+    "answer": "On utilise un Server Component pour le data fetching et la performance, et un Client Component pour les interactions utilisateur.",
+    "subjectId": 3
   }
 ]
