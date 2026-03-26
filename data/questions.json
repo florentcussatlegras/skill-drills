@@ -628,5 +628,11 @@
     "label": "Qu'est-ce que next.config.js ?",
     "answer": "C'est un fichier de configuration permettant de personnaliser le comportement de Next.js.",
     "subjectId": 4
+  },
+  {
+    "id": 103,
+    "label": "Quelle est la différence entre useEffect et useLayoutEffect ?",
+    "answer": "useEffect s'exécute après le rendu du composant, tandis que useLayoutEffect s'exécute juste avant l'affichage dans le DOM et peut bloquer le rendu.",
+    "subjectId": 3
   }
 ]
