@@ -268,5 +268,365 @@
     "label": "Quelle est la différence entre call, apply et bind ?",
     "answer": "call et apply invoquent immédiatement la fonction avec un contexte, bind retourne une nouvelle fonction liée au contexte.",
     "subjectId": 1
+  },
+  {
+    "id": 43,
+    "label": "Qu'est-ce que React ?",
+    "answer": "React est une bibliothèque JavaScript pour construire des interfaces utilisateur.",
+    "subjectId": 3
+  },
+  {
+    "id": 44,
+    "label": "Qui a créé React ?",
+    "answer": "React a été créé par Facebook (Meta).",
+    "subjectId": 3
+  },
+  {
+    "id": 45,
+    "label": "Qu'est-ce qu'un composant en React ?",
+    "answer": "Un composant est une fonction ou classe qui retourne du JSX pour afficher une partie de l'interface.",
+    "subjectId": 3
+  },
+  {
+    "id": 46,
+    "label": "Qu'est-ce que le JSX ?",
+    "answer": "Le JSX est une syntaxe qui permet d'écrire du HTML dans du JavaScript.",
+    "subjectId": 3
+  },
+  {
+    "id": 47,
+    "label": "Quelle est la différence entre props et state ?",
+    "answer": "Les props sont des données passées au composant, le state est interne et modifiable par le composant.",
+    "subjectId": 3
+  },
+  {
+    "id": 48,
+    "label": "Qu'est-ce que le Virtual DOM ?",
+    "answer": "Le Virtual DOM est une représentation en mémoire du DOM réel utilisée pour optimiser les mises à jour.",
+    "subjectId": 3
+  },
+  {
+    "id": 49,
+    "label": "Qu'est-ce qu'un hook en React ?",
+    "answer": "Un hook est une fonction qui permet d'utiliser des fonctionnalités React dans les composants fonctionnels.",
+    "subjectId": 3
+  },
+  {
+    "id": 50,
+    "label": "À quoi sert useState ?",
+    "answer": "useState permet de gérer l'état local d'un composant fonctionnel.",
+    "subjectId": 3
+  },
+  {
+    "id": 51,
+    "label": "À quoi sert useEffect ?",
+    "answer": "useEffect permet d'exécuter du code après le rendu du composant.",
+    "subjectId": 3
+  },
+  {
+    "id": 52,
+    "label": "Qu'est-ce qu'un rendu conditionnel en React ?",
+    "answer": "C'est le fait d'afficher des éléments différents selon une condition.",
+    "subjectId": 3
+  },
+  {
+    "id": 53,
+    "label": "Pourquoi utiliser une clé (key) dans une liste ?",
+    "answer": "La clé permet à React d'identifier chaque élément pour optimiser les mises à jour.",
+    "subjectId": 3
+  },
+  {
+    "id": 54,
+    "label": "Qu'est-ce qu'un composant contrôlé ?",
+    "answer": "Un composant contrôlé est un formulaire dont la valeur est gérée par le state React.",
+    "subjectId": 3
+  },
+  {
+    "id": 55,
+    "label": "Qu'est-ce qu'un composant non contrôlé ?",
+    "answer": "Un composant non contrôlé utilise le DOM pour gérer ses valeurs via des refs.",
+    "subjectId": 3
+  },
+  {
+    "id": 56,
+    "label": "Qu'est-ce que useRef ?",
+    "answer": "useRef permet de référencer un élément DOM ou de stocker une valeur persistante.",
+    "subjectId": 3
+  },
+  {
+    "id": 57,
+    "label": "Qu'est-ce que le lifting state up ?",
+    "answer": "C'est le fait de remonter le state dans un composant parent pour le partager entre plusieurs enfants.",
+    "subjectId": 3
+  },
+  {
+    "id": 58,
+    "label": "Qu'est-ce que React Router ?",
+    "answer": "React Router est une bibliothèque pour gérer la navigation entre pages dans une application React.",
+    "subjectId": 3
+  },
+  {
+    "id": 59,
+    "label": "Qu'est-ce qu'un fragment en React ?",
+    "answer": "Un fragment permet de regrouper plusieurs éléments sans ajouter de noeud DOM supplémentaire.",
+    "subjectId": 3
+  },
+  {
+    "id": 60,
+    "label": "Qu'est-ce que le context API ?",
+    "answer": "Le Context API permet de partager des données globales sans passer par les props.",
+    "subjectId": 3
+  },
+  {
+    "id": 61,
+    "label": "Qu'est-ce que memo en React ?",
+    "answer": "React.memo permet de mémoriser un composant pour éviter des rendus inutiles.",
+    "subjectId": 3
+  },
+  {
+    "id": 62,
+    "label": "Quelle est la différence entre useMemo et useCallback ?",
+    "answer": "useMemo mémorise une valeur, useCallback mémorise une fonction.",
+    "subjectId": 3
+  },
+  {
+    "id": 63,
+    "label": "Qu'est-ce que Next.js ?",
+    "answer": "Next.js est un framework React permettant de créer des applications web avec rendu côté serveur.",
+    "subjectId": 4
+  },
+  {
+    "id": 64,
+    "label": "Quelle est la principale différence entre React et Next.js ?",
+    "answer": "React est une bibliothèque UI, Next.js est un framework qui ajoute des fonctionnalités comme le SSR et le routing.",
+    "subjectId": 4
+  },
+  {
+    "id": 65,
+    "label": "Qu'est-ce que le SSR dans Next.js ?",
+    "answer": "Le SSR (Server-Side Rendering) consiste à générer la page côté serveur à chaque requête.",
+    "subjectId": 4
+  },
+  {
+    "id": 66,
+    "label": "Qu'est-ce que le SSG dans Next.js ?",
+    "answer": "Le SSG (Static Site Generation) consiste à générer les pages au moment du build.",
+    "subjectId": 4
+  },
+  {
+    "id": 67,
+    "label": "Qu'est-ce que l'ISR dans Next.js ?",
+    "answer": "L'ISR (Incremental Static Regeneration) permet de régénérer une page statique après le déploiement.",
+    "subjectId": 4
+  },
+  {
+    "id": 68,
+    "label": "Comment fonctionne le routing dans Next.js ?",
+    "answer": "Le routing est basé sur le système de fichiers dans le dossier pages ou app.",
+    "subjectId": 4
+  },
+  {
+    "id": 69,
+    "label": "Qu'est-ce que getServerSideProps ?",
+    "answer": "C'est une fonction qui permet de récupérer des données côté serveur à chaque requête.",
+    "subjectId": 4
+  },
+  {
+    "id": 70,
+    "label": "Qu'est-ce que getStaticProps ?",
+    "answer": "C'est une fonction utilisée pour récupérer des données au moment du build.",
+    "subjectId": 4
+  },
+  {
+    "id": 71,
+    "label": "Qu'est-ce que getStaticPaths ?",
+    "answer": "C'est une fonction qui définit les chemins dynamiques à générer en SSG.",
+    "subjectId": 4
+  },
+  {
+    "id": 72,
+    "label": "Qu'est-ce que le dossier app dans Next.js ?",
+    "answer": "Le dossier app permet d'utiliser le nouveau système de routing basé sur les composants.",
+    "subjectId": 4
+  },
+  {
+    "id": 73,
+    "label": "Qu'est-ce qu'un layout dans Next.js ?",
+    "answer": "Un layout est un composant partagé entre plusieurs pages pour structurer l'interface.",
+    "subjectId": 4
+  },
+  {
+    "id": 74,
+    "label": "Qu'est-ce qu'une route dynamique dans Next.js ?",
+    "answer": "C'est une route dont le chemin contient des paramètres dynamiques, comme [id].",
+    "subjectId": 4
+  },
+  {
+    "id": 75,
+    "label": "Qu'est-ce que le Link component ?",
+    "answer": "Le composant Link permet de naviguer entre pages sans recharger la page.",
+    "subjectId": 4
+  },
+  {
+    "id": 76,
+    "label": "Qu'est-ce que le préchargement des pages ?",
+    "answer": "Next.js précharge automatiquement les pages liées pour améliorer les performances.",
+    "subjectId": 4
+  },
+  {
+    "id": 77,
+    "label": "Qu'est-ce qu'une API route dans Next.js ?",
+    "answer": "Une API route permet de créer des endpoints backend directement dans l'application.",
+    "subjectId": 4
+  },
+  {
+    "id": 78,
+    "label": "Qu'est-ce que le middleware dans Next.js ?",
+    "answer": "Le middleware permet d'exécuter du code avant la requête pour modifier la réponse ou rediriger.",
+    "subjectId": 4
+  },
+  {
+    "id": 79,
+    "label": "Qu'est-ce que next/image ?",
+    "answer": "C'est un composant optimisé pour gérer les images avec lazy loading et optimisation automatique.",
+    "subjectId": 4
+  },
+  {
+    "id": 80,
+    "label": "Qu'est-ce que next/head ?",
+    "answer": "next/head permet de modifier les balises HTML du head comme le titre ou les meta.",
+    "subjectId": 4
+  },
+  {
+    "id": 81,
+    "label": "Qu'est-ce que le mode développement dans Next.js ?",
+    "answer": "C'est un mode avec rechargement automatique et outils de debug pour faciliter le développement.",
+    "subjectId": 4
+  },
+  {
+    "id": 82,
+    "label": "Pourquoi utiliser Next.js ?",
+    "answer": "Pour améliorer les performances, le SEO et simplifier le développement d'applications React.",
+    "subjectId": 4
+  },
+  {
+    "id": 83,
+    "label": "Quelle est la différence entre SSR, SSG et CSR dans Next.js ?",
+    "answer": "SSR génère la page à chaque requête, SSG génère les pages au build, CSR rend la page côté client après chargement du JavaScript.",
+    "subjectId": 4
+  },
+  {
+    "id": 84,
+    "label": "Dans quel cas utiliser getServerSideProps plutôt que getStaticProps ?",
+    "answer": "Quand les données doivent être mises à jour à chaque requête ou dépendent de l'utilisateur.",
+    "subjectId": 4
+  },
+  {
+    "id": 85,
+    "label": "Comment fonctionne l'Incremental Static Regeneration (ISR) ?",
+    "answer": "ISR permet de régénérer une page statique après le build en arrière-plan selon un délai défini.",
+    "subjectId": 4
+  },
+  {
+    "id": 86,
+    "label": "Quelle est la différence entre le dossier pages et app dans Next.js ?",
+    "answer": "pages utilise l'ancien routing basé sur les fichiers, app introduit le nouveau routing avec layouts et server components.",
+    "subjectId": 4
+  },
+  {
+    "id": 87,
+    "label": "Qu'est-ce qu'un Server Component dans Next.js ?",
+    "answer": "Un Server Component est exécuté uniquement côté serveur et ne charge pas de JavaScript côté client.",
+    "subjectId": 4
+  },
+  {
+    "id": 88,
+    "label": "Qu'est-ce qu'un Client Component ?",
+    "answer": "Un Client Component est exécuté côté navigateur et peut utiliser des hooks comme useState ou useEffect.",
+    "subjectId": 4
+  },
+  {
+    "id": 89,
+    "label": "Comment forcer un composant à être côté client dans le dossier app ?",
+    "answer": "En ajoutant 'use client' en haut du fichier.",
+    "subjectId": 4
+  },
+  {
+    "id": 90,
+    "label": "Comment fonctionne le data fetching dans le dossier app ?",
+    "answer": "Le data fetching se fait directement dans les Server Components avec async/await.",
+    "subjectId": 4
+  },
+  {
+    "id": 91,
+    "label": "Quelle est la différence entre fetch dans Next.js et fetch classique ?",
+    "answer": "Next.js étend fetch avec du caching automatique et des options comme revalidate.",
+    "subjectId": 4
+  },
+  {
+    "id": 92,
+    "label": "Comment gérer le cache des données dans Next.js ?",
+    "answer": "Avec les options de fetch comme cache, revalidate ou no-store.",
+    "subjectId": 4
+  },
+  {
+    "id": 93,
+    "label": "Qu'est-ce que le streaming dans Next.js ?",
+    "answer": "Le streaming permet d'envoyer progressivement le contenu HTML au client avant que tout soit chargé.",
+    "subjectId": 4
+  },
+  {
+    "id": 94,
+    "label": "Comment fonctionne le suspense en Next.js ?",
+    "answer": "Suspense permet d'afficher un fallback pendant le chargement d'un composant ou de données.",
+    "subjectId": 4
+  },
+  {
+    "id": 95,
+    "label": "Qu'est-ce que le middleware et dans quel cas l'utiliser ?",
+    "answer": "Le middleware s'exécute avant la requête pour gérer l'authentification, les redirections ou les headers.",
+    "subjectId": 4
+  },
+  {
+    "id": 96,
+    "label": "Comment gérer l'authentification dans Next.js ?",
+    "answer": "Avec des solutions comme NextAuth ou via middleware et cookies sécurisés.",
+    "subjectId": 4
+  },
+  {
+    "id": 97,
+    "label": "Quelle est la différence entre API Routes et Route Handlers ?",
+    "answer": "API Routes sont utilisées dans pages/api, Route Handlers sont utilisées dans app/api avec le nouveau routing.",
+    "subjectId": 4
+  },
+  {
+    "id": 98,
+    "label": "Comment améliorer les performances d'une application Next.js ?",
+    "answer": "En utilisant SSG, ISR, lazy loading, optimisation des images et caching.",
+    "subjectId": 4
+  },
+  {
+    "id": 99,
+    "label": "Comment Next.js améliore le SEO ?",
+    "answer": "Avec le rendu côté serveur, la génération statique et la gestion des balises meta.",
+    "subjectId": 4
+  },
+  {
+    "id": 100,
+    "label": "Qu'est-ce que le code splitting dans Next.js ?",
+    "answer": "Le code splitting permet de charger uniquement le JavaScript nécessaire à chaque page.",
+    "subjectId": 4
+  },
+  {
+    "id": 101,
+    "label": "Comment fonctionne le lazy loading des composants ?",
+    "answer": "Avec dynamic import pour charger un composant uniquement lorsqu'il est nécessaire.",
+    "subjectId": 4
+  },
+  {
+    "id": 102,
+    "label": "Qu'est-ce que next.config.js ?",
+    "answer": "C'est un fichier de configuration permettant de personnaliser le comportement de Next.js.",
+    "subjectId": 4
   }
 ]
