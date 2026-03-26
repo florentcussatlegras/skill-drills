@@ -716,7 +716,7 @@
   {
     "id": 117,
     "label": "Comment faire de l'ISR (Incremental Static Regeneration) dans le dossier app avec fetch ?",
-    "answer": "Pour de l'ISR, on utilise un Server Component async avec fetch et on définit 'export const revalidate = X;' où X est le nombre de secondes pour la régénération. La page est générée statiquement au build et régénérée automatiquement en arrière-plan toutes les X secondes. Exemple :\n\nexport const revalidate = 60;\nexport default async function Page() {\n  const res = await fetch('https://api.example.com/data', { next: { revalidate: 60 } });\n  const data = await res.json();\n  return <div>{data.title}</div>;\n}",
+    "answer": "<p>Pour faire de l’<strong>ISR (Incremental Static Regeneration)</strong> dans le dossier <code>/app</code>, on utilise un <strong>Server Component async</strong> avec <code>fetch</code> et on définit <code>export const revalidate = X;</code> où X est le nombre de secondes.</p>\n\n<p>La page est générée statiquement au build puis régénérée automatiquement en arrière-plan toutes les X secondes.</p><br>\n\n<p><strong>Exemple :</strong></p>\n\n<p><code>export const revalidate = 60;</code><br/>\n<code>export default async function Page() {</code><br/>\n<code>&nbsp;&nbsp;const res = await fetch('https://api.example.com/data', { next: { revalidate: 60 } });</code><br/>\n<code>&nbsp;&nbsp;const data = await res.json();</code><br/>\n<code>&nbsp;&nbsp;return &lt;div&gt;{data.title}&lt;/div&gt;;</code><br/>\n<code>}</code></p>",
     "subjectId": 4
   },
   {
