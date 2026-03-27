@@ -530,7 +530,7 @@
   {
     "id": 86,
     "label": "Quelle est la différence entre le dossier pages et app dans Next.js ?",
-    "answer": "<string>/pages</strong> utilise l'ancien routing basé sur les fichiers, app introduit le nouveau routing avec layouts et server components.",
+    "answer": "<string>/pages</strong> utilise l'ancien routing basé sur les fichiers,<br><br><strong>/app</strong> introduit le nouveau routing avec layouts et server components.",
     "subjectId": 4
   },
   {
