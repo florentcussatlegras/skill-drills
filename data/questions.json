@@ -728,7 +728,7 @@
   {
     "id": 119,
     "label": "Quelle est la différence entre SSR, SSG et ISR dans Next.js ?",
-    "answer": "SSR utilise getServerSideProps pour générer la page à chaque requête.\nSSG utilise getStaticProps pour générer la page au moment du build.\nISR est une extension de SSG qui ajoute une régénération automatique des pages après un certain délai grâce à revalidate.",
+    "answer": "SSR utilise getServerSideProps pour générer la page à chaque requête.\n<br><br>SSG utilise getStaticProps pour générer la page au moment du build.\n<br><br>ISR est une extension de SSG qui ajoute une régénération automatique des pages après un certain délai grâce à revalidate.",
     "subjectId": 4
   },
   {
