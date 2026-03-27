@@ -486,12 +486,6 @@
     "subjectId": 4
   },
   {
-    "id": 85,
-    "label": "Comment fonctionne l'Incremental Static Regeneration (ISR) ?",
-    "answer": "ISR permet de régénérer une page statique après le build en arrière-plan selon un délai défini.",
-    "subjectId": 4
-  },
-  {
     "id": 86,
     "label": "Quelle est la différence entre le dossier pages et app dans Next.js ?",
     "answer": "<string>/pages</strong> utilise l'ancien routing basé sur les fichiers,<br><br><strong>/app</strong> introduit le nouveau routing avec layouts et server components.",
