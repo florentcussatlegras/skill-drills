@@ -510,12 +510,6 @@
     "subjectId": 4
   },
   {
-    "id": 83,
-    "label": "Quelle est la différence entre SSR, SSG et CSR dans Next.js ?",
-    "answer": "SSR génère la page à chaque requête<br><br>SSG génère les pages au build<br><br>CSR rend la page côté client après chargement du JavaScript.",
-    "subjectId": 4
-  },
-  {
     "id": 84,
     "label": "Dans quel cas utiliser getServerSideProps plutôt que getStaticProps ?",
     "answer": "Quand les données doivent être mises à jour à chaque requête ou dépendent de l'utilisateur.",
@@ -727,8 +721,8 @@
   },
   {
     "id": 119,
-    "label": "Quelle est la différence entre SSR, SSG et ISR dans Next.js ?",
-    "answer": "SSR (Static Site Renderind) utilise getServerSideProps pour générer la page à chaque requête.\n<br><br>SSG (Static Site Generation) utilise getStaticProps pour générer la page au moment du build.\n<br><br>ISR (Incremental Static Regeneration) est une extension de SSG qui ajoute une régénération automatique des pages après un certain délai grâce à revalidate.",
+    "label": "Quelle est la différence entre SSR, SSG, ISR et CSR dans Next.js ?",
+    "answer": "<p><strong>SSR (Server-Side Rendering)</strong> consiste à générer la page côté serveur à chaque requête.</p><br/><br/>\n\n<p>Dans le App Router, cela se fait avec un Server Component et un <code>fetch</code> avec <code>cache: 'no-store'</code> :</p><br/>\n\n<p><code>export default async function Page() {</code><br/>\n<code>&nbsp;&nbsp;const res = await fetch('https://api.example.com/data', { cache: 'no-store' });</code><br/>\n<code>&nbsp;&nbsp;const data = await res.json();</code><br/>\n<code>&nbsp;&nbsp;return &lt;div&gt;{data.title}&lt;/div&gt;;</code><br/>\n<code>}</code></p>\n\n<br/><br/>\n\n<p><strong>SSG (Static Site Generation)</strong> consiste à générer la page une seule fois au moment du build.</p><br/><br/>\n\n<p>Dans le App Router, le cache est activé par défaut (ou avec <code>force-cache</code>) :</p><br/>\n\n<p><code>export default async function Page() {</code><br/>\n<code>&nbsp;&nbsp;const res = await fetch('https://api.example.com/data', { cache: 'force-cache' });</code><br/>\n<code>&nbsp;&nbsp;const data = await res.json();</code><br/>\n<code>&nbsp;&nbsp;return &lt;div&gt;{data.title}&lt;/div&gt;;</code><br/>\n<code>}</code></p>\n\n<br/><br/>\n\n<p><strong>ISR (Incremental Static Regeneration)</strong> permet de régénérer automatiquement une page après un certain délai.</p><br/><br/>\n\n<p>Avec le App Router, on utilise <code>revalidate</code> :</p><br/>\n\n<p><code>export default async function Page() {</code><br/>\n<code>&nbsp;&nbsp;const res = await fetch('https://api.example.com/data', { next: { revalidate: 60 } });</code><br/>\n<code>&nbsp;&nbsp;const data = await res.json();</code><br/>\n<code>&nbsp;&nbsp;return &lt;div&gt;{data.title}&lt;/div&gt;;</code><br/>\n<code>}</code></p>\n\n<br/><br/>\n\n<p><strong>CSR (Client-Side Rendering)</strong> consiste à générer la page côté client après le chargement du JavaScript.</p><br/><br/>\n\n<p>Les données sont récupérées avec des hooks comme <code>useEffect</code> :</p><br/>\n\n<p><code>'use client';</code><br/>\n<code>import { useEffect, useState } from 'react';</code><br/>\n<br/>\n<code>export default function Page() {</code><br/>\n<code>&nbsp;&nbsp;const [data, setData] = useState(null);</code><br/>\n<br/>\n<code>&nbsp;&nbsp;useEffect(() =&gt; {</code><br/>\n<code>&nbsp;&nbsp;&nbsp;&nbsp;fetch('https://api.example.com/data')</code><br/>\n<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.then(res =&gt; res.json())</code><br/>\n<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.then(setData);</code><br/>\n<code>&nbsp;&nbsp;}, []);</code><br/>\n<br/>\n<code>&nbsp;&nbsp;if (!data) return &lt;p&gt;Loading...&lt;/p&gt;;</code><br/>\n<br/>\n<code>&nbsp;&nbsp;return &lt;div&gt;{data.title}&lt;/div&gt;;</code><br/>\n<code>}</code></p>",
     "subjectId": 4
   },
   {
