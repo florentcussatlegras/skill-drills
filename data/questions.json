@@ -402,39 +402,9 @@
     "subjectId": 4
   },
   {
-    "id": 65,
-    "label": "Qu'est-ce que le SSR dans Next.js ?",
-    "answer": "Le SSR (Server-Side Rendering) dans Next.js consiste à générer la page côté serveur à <strong>chaque requête</strong>, de manière à fournir des données toujours à jour et à améliorer le SEO.<br><br>Exemple avec le Pages Router (<code>pages/</code>) :<br><br><pre><code>// pages/index.tsx\nexport async function getServerSideProps() {\n  const res = await fetch('https://jsonplaceholder.typicode.com/posts/1');\n  const post = await res.json();\n\n  return { props: { post } };\n}\n\nexport default function HomePage({ post }) {\n  return (\n    &lt;div&gt;\n      &lt;h1&gt;{post.title}&lt;/h1&gt;\n      &lt;p&gt;{post.body}&lt;/p&gt;\n    &lt;/div&gt;\n  );\n}</code></pre><br>Exemple avec le App Router (<code>app/</code>) :<br><br><pre><code>// app/page.tsx\nexport default async function HomePage() {\n  const res = await fetch('https://jsonplaceholder.typicode.com/posts/1', { cache: 'no-store' });\n  const post = await res.json();\n\n  return (\n    &lt;div&gt;\n      &lt;h1&gt;{post.title}&lt;/h1&gt;\n      &lt;p&gt;{post.body}&lt;/p&gt;\n    &lt;/div&gt;\n  );\n}</code></pre><br>Dans les deux cas, la page est générée <strong>côté serveur à chaque requête</strong>, mais avec le App Router, on n’a plus besoin de <code>getServerSideProps</code>, le fetch côté serveur suffit.",
-    "subjectId": 4
-  },
-  {
-    "id": 66,
-    "label": "Qu'est-ce que le SSG dans Next.js ?",
-    "answer": "Le SSG (Static Site Generation) consiste à générer les pages au moment du build.",
-    "subjectId": 4
-  },
-  {
-    "id": 67,
-    "label": "Qu'est-ce que l'ISR dans Next.js ?",
-    "answer": "L'ISR (Incremental Static Regeneration) permet de régénérer une page statique après le déploiement.",
-    "subjectId": 4
-  },
-  {
     "id": 68,
     "label": "Comment fonctionne le routing dans Next.js ?",
     "answer": "<h3>Routing dans Next.js</h3>\n<p>Next.js utilise un <strong>routing basé sur le système de fichiers</strong>, ce qui signifie que la structure de ton dossier <code>/pages</code> ou <code>/app</code> détermine automatiquement les routes de ton application.</p><br>\n\n<h4>Dossier /pages</h4>\n<br><ul>\n<li>Chaque fichier <code>.js</code> ou <code>.tsx</code> dans <code>/pages</code> devient une route.<br>\n<br>Exemple : <code>/pages/about.js</code> → route <code>/about</code><br>\nExemple : <code>/pages/blog/post.js</code> → route <code>/blog/post</code></li><br><br><li>Les <strong>dossiers dynamiques</strong> utilisent des crochets <code>[param]</code> :<br><br><code>/pages/user/[id].js</code> → route <code>/user/1</code>, <code>/user/2</code>, etc.</li>\n<li><br>Les fichiers spéciaux :<br>\n<code>_app.js</code> → wrapper global pour toutes les pages<br>\n<code>_document.js</code> → personnalisation du HTML rendu côté serveur<br>\n<code>_error.js</code> → page d’erreur globale</li>\n</ul><br>\n\n<h4>Dossier /app (Next.js 13+)</h4>\n<br><ul>\n<li>Chaque dossier devient une <strong>route</strong> et chaque <code>page.js</code> ou <code>page.tsx</code> à l’intérieur correspond à la route du dossier.<br><br>\nExemple : <code>/app/about/page.js</code> → route <code>/about</code><br><br>\nExemple : <code>/app/blog/[id]/page.js</code> → route dynamique <code>/blog/123</code></li><br/>\n<li>Supporte les <strong>Server Components</strong> et <code>layout.tsx</code> pour définir la structure commune des pages.</li>\n</ul><br><br>\n\n<h4>Points importants</h4><br>\n<ul>\n<li>Le routing est <strong>automatique</strong>, pas besoin de config supplémentaire.</li>\n<li>Les <strong>routes dynamiques</strong> utilisent <code>[param]</code> et peuvent être récupérées via <code>useRouter()</code> ou <code>params</code> dans <code>app/</code>.</li>\n<li>Next.js supporte aussi les <strong>API routes</strong> dans <code>/pages/api</code>, qui suivent le même principe de mapping fichier → endpoint.</li>\n</ul><br/>\n<p><strong>Résumé rapide :</strong> Le routing dans Next.js est <strong>fichier → route</strong>, avec des dossiers et fichiers dynamiques pour gérer les paramètres et la structure de l’application.</p>",
-    "subjectId": 4
-  },
-  {
-    "id": 69,
-    "label": "Qu'est-ce que getServerSideProps ?",
-    "answer": "C'est une fonction qui permet de récupérer des données côté serveur à chaque requête.\n\n<br><br>Exemple :<br><br>\n<pre><code>export async function getServerSideProps(context) {\n  const res = await fetch('https://api.example.com/posts');\n  const posts = await res.json();\n\n  return {\n    props: { posts }, // sera passé au composant de page\n  };\n}\n\nexport default function Page({ posts }) {\n  return (\n    &lt;ul&gt;\n      {posts.map(p =&gt; &lt;li key={p.id}&gt;{p.title}&lt;/li&gt;)}\n    &lt;/ul&gt;\n  );\n}</code></pre>",
-    "subjectId": 4
-  },
-  {
-    "id": 70,
-    "label": "Qu'est-ce que getStaticProps ?",
-    "answer": "C'est une fonction utilisée pour récupérer des données au moment du build.",
     "subjectId": 4
   },
   {
@@ -446,43 +416,43 @@
   {
     "id": 72,
     "label": "Qu'est-ce que le dossier app dans Next.js ?",
-    "answer": "Le dossier app permet d'utiliser le nouveau système de routing basé sur les composants.",
+    "answer": "<p><strong>Dossier <code>/app</code></strong> :</p><br /><br />\n<p>Le dossier <code>/app</code> permet d'utiliser le <strong>nouveau système de routing basé sur les composants</strong> dans Next.js (App Router). Il remplace progressivement le <code>/pages</code> router et permet :</p><br /><br />\n<ul>\n  <li>De créer des <strong>Server Components</strong> et <strong>Client Components</strong></li>\n  <li>De gérer les layouts partagés</li>\n  <li>Le streaming et le suspense pour le rendu progressif</li>\n</ul><br /><br />\n<p><strong>Exemple :</strong></p><br /><br />\n<p><code>// app/page.tsx</code><br />\n<code>export default function HomePage() {</code><br />\n<code>&nbsp;&nbsp;return &lt;h1&gt;Bienvenue sur mon site&lt;/h1&gt;;</code><br />\n<code>}</code></p>",
     "subjectId": 4
   },
   {
     "id": 73,
     "label": "Qu'est-ce qu'un layout dans Next.js ?",
-    "answer": "Un layout est un composant réutilisable dans Next.js, nommé layout.tsx, qui définit la structure commune de plusieurs pages (comme l’en-tête, le pied de page, la barre de navigation ou la sidebar). Il permet de centraliser l’interface partagée, d’assurer la cohérence visuelle et de simplifier la maintenance du code.",
+    "answer": "<p><strong>Layout</strong> :</p><br /><br />\n<p>Un <strong>layout</strong> est un composant réutilisable nommé <code>layout.tsx</code> qui définit la <strong>structure commune</strong> de plusieurs pages (ex : en-tête, pied de page, barre de navigation, sidebar).</p><br /><br />\n<p>Il permet de :</p><br /><br />\n<ul>\n  <li>Centraliser l’interface partagée</li>\n  <li>Assurer la cohérence visuelle</li>\n  <li>Simplifier la maintenance du code</li>\n</ul><br /><br />\n<p><strong>Exemple :</strong></p><br /><br />\n<p><code>// app/layout.tsx</code><br />\n<code>export default function RootLayout({ children }) {</code><br />\n<code>&nbsp;&nbsp;return (</code><br />\n<code>&nbsp;&nbsp;&nbsp;&nbsp;&lt;html&gt;</code><br />\n<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt;</code><br />\n<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;header&gt;Header&lt;/header&gt;</code><br />\n<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{children}</code><br />\n<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;footer&gt;Footer&lt;/footer&gt;</code><br />\n<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/body&gt;</code><br />\n<code>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/html&gt;</code><br />\n<code>&nbsp;&nbsp;);</code><br />\n<code>}</code></p>",
     "subjectId": 4
   },
   {
     "id": 74,
     "label": "Qu'est-ce qu'une route dynamique dans Next.js ?",
-    "answer": "C'est une route dont le chemin contient des paramètres dynamiques, comme [id].",
+    "answer": "<p><strong>Route dynamique</strong> :</p><br /><br />\n<p>Une route dynamique est une route dont le chemin contient des <strong>paramètres dynamiques</strong>, généralement définis entre crochets <code>[param]</code>.</p><br /><br />\n<p>Exemple : page pour un article avec un ID dynamique</p><br /><br />\n<p><code>// app/posts/[id]/page.tsx</code><br />\n<code>export default function PostPage({ params }) {</code><br />\n<code>&nbsp;&nbsp;return &lt;h1&gt;Article {params.id}&lt;/h1&gt;;</code><br />\n<code>}</code></p>",
     "subjectId": 4
   },
   {
     "id": 75,
     "label": "Qu'est-ce que le Link component ?",
-    "answer": "Le composant Link permet de naviguer entre pages sans recharger la page.",
+    "answer": "<p><strong>Link component</strong> :</p><br /><br />\n<p>Le composant <code>&lt;Link&gt;</code> permet de naviguer entre les pages <strong>sans recharger la page</strong>, grâce au préchargement automatique des pages liées.</p><br /><br />\n<p>Exemple :</p><br /><br />\n<p><code>import Link from 'next/link';</code><br />\n<code>export default function Home() {</code><br />\n<code>&nbsp;&nbsp;return (</code><br />\n<code>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;</code><br />\n<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Link href='/about'&gt;Aller à About&lt;/Link&gt;</code><br />\n<code>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;</code><br />\n<code>&nbsp;&nbsp;);</code><br />\n<code>}</code></p>",
     "subjectId": 4
   },
   {
     "id": 76,
     "label": "Qu'est-ce que le préchargement des pages ?",
-    "answer": "Next.js précharge automatiquement les pages liées pour améliorer les performances.",
+    "answer": "<p><strong>Préchargement des pages</strong> :</p><br /><br />\n<p>Next.js précharge automatiquement les pages liées via les composants <code>&lt;Link&gt;</code> pour améliorer les performances de navigation.</p><br /><br />\n<p><strong>Exemple :</strong></p><br /><br />\n<p><code>import Link from 'next/link';</code><br />\n<code>export default function Home() {</code><br />\n<code>&nbsp;&nbsp;return (</code><br />\n<code>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;</code><br />\n<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Link href='/about'&gt;Aller à About&lt;/Link&gt;</code><br />\n<code>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;</code><br />\n<code>&nbsp;&nbsp;);</code><br />\n<code>}</code></p><br /><br />\n<p>➡️ La page <code>/about</code> sera préchargée en arrière-plan avant que l’utilisateur clique.</p>",
     "subjectId": 4
   },
   {
     "id": 77,
     "label": "Qu'est-ce qu'une API route dans Next.js ?",
-    "answer": "Une API route permet de créer des endpoints backend directement dans l'application.",
+    "answer": "<p><strong>API route</strong> :</p><br /><br />\n<p>Une API route permet de créer des endpoints backend directement dans l'application Next.js, sans avoir besoin d’un serveur séparé.</p><br /><br />\n<p><strong>Exemple :</strong></p><br /><br />\n<p><code>// pages/api/hello.ts</code><br />\n<code>export default function handler(req, res) {</code><br />\n<code>&nbsp;&nbsp;res.status(200).json({ message: 'Hello Next.js' });</code><br />\n<code>}</code></p><br /><br />\n<p>➡️ Accessible via <code>/api/hello</code> depuis le frontend ou d’autres services.</p>",
     "subjectId": 4
   },
   {
     "id": 78,
     "label": "Qu'est-ce que le middleware dans Next.js ?",
-    "answer": "Le middleware permet d'exécuter du code avant la requête pour modifier la réponse ou rediriger.",
+    "answer": "<p><strong>Middleware</strong> :</p><br /><br />\n<p>Le middleware permet d’exécuter du code avant qu’une requête n’atteigne votre page ou API, pour modifier la réponse, rediriger ou gérer l’authentification.</p><br /><br />\n<p><strong>Exemple :</strong></p><br /><br />\n<p><code>// middleware.ts</code><br />\n<code>import { NextResponse } from 'next/server';</code><br /><br />\n<code>export function middleware(req) {</code><br />\n<code>&nbsp;&nbsp;if (!req.nextUrl.pathname.startsWith('/admin')) return NextResponse.next();</code><br />\n<code>&nbsp;&nbsp;return NextResponse.redirect('/login');</code><br />\n<code>}</code><br /><br />\n<p>➡️ Ici, toute page commençant par <code>/admin</code> redirige vers <code>/login</code> si la condition n’est pas remplie.</p>",
     "subjectId": 4
   },
   {
@@ -494,7 +464,7 @@
   {
     "id": 80,
     "label": "Qu'est-ce que next/head ?",
-    "answer": "next/head permet de modifier les balises HTML du head comme le titre ou les meta.",
+    "answer": "<p><strong>next/head</strong> est un composant de Next.js qui permet de modifier les balises HTML dans le <code>&lt;head&gt;</code> d'une page, comme le <code>&lt;title&gt;</code> ou les <code>&lt;meta&gt;</code>.</p><br /><br />\n\n<p>Il est utile pour gérer le SEO, les favicons, ou tout autre élément du <code>&lt;head&gt;</code>.</p><br /><br />\n\n<p><strong>Exemple :</strong></p><br /><br />\n<p><code>import Head from 'next/head';</code><br />\n<code>export default function Page() {</code><br />\n<code>&nbsp;&nbsp;return (</code><br />\n<code>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;</code><br />\n<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Head&gt;</code><br />\n<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Ma page Next.js&lt;/title&gt;</code><br />\n<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta name=\"description\" content=\"Description de ma page\" /&gt;</code><br />\n<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Head&gt;</code><br />\n<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Bonjour Next.js&lt;/h1&gt;</code><br />\n<code>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;</code><br />\n<code>&nbsp;&nbsp;);</code><br />\n<code>}</code></p><br /><br />\n\n<p>➡️ Ici, le titre et la meta description de la page sont définis dynamiquement via <code>next/head</code>.</p>",
     "subjectId": 4
   },
   {
