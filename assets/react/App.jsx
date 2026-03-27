@@ -29,7 +29,7 @@ export default function App() {
                     alt="Q/A Tech Logo"
                     className="h-24"
                 />
-               </div>
+            </div>
             {/* Sidebar */}
             <aside
                 className="
@@ -47,11 +47,12 @@ export default function App() {
             <main
                 className="
                     bg-white
-                    w-full
-                    h-full
-                    flex flex-col items-center justify-center
-                    md:p-6
-                    min-h-[60svh] md:min-h-0
+        w-full
+        flex flex-col items-center
+        justify-start md:justify-center
+        md:p-6
+        min-h-[60svh] md:min-h-0
+        overflow-auto
                 "
             >
                 <QuestionCard question={question} onNext={loadQuestion} />
