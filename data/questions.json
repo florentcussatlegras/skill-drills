@@ -512,7 +512,7 @@
   {
     "id": 83,
     "label": "Quelle est la différence entre SSR, SSG et CSR dans Next.js ?",
-    "answer": "SSR génère la page à chaque requête, SSG génère les pages au build, CSR rend la page côté client après chargement du JavaScript.",
+    "answer": "SSR génère la page à chaque requête<br><br>SSG génère les pages au build<br><br>CSR rend la page côté client après chargement du JavaScript.",
     "subjectId": 4
   },
   {
