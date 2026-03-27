@@ -530,7 +530,7 @@
   {
     "id": 86,
     "label": "Quelle est la différence entre le dossier pages et app dans Next.js ?",
-    "answer": "pages utilise l'ancien routing basé sur les fichiers, app introduit le nouveau routing avec layouts et server components.",
+    "answer": "<string>/pages</strong> utilise l'ancien routing basé sur les fichiers, app introduit le nouveau routing avec layouts et server components.",
     "subjectId": 4
   },
   {
@@ -553,7 +553,7 @@
   },
   {
     "id": 90,
-    "label": "Comment fonctionne le data fetching dans le dossier app ?",
+    "label": "Comment fonctionne le data fetching dans le dossier /app ?",
     "answer": "Le data fetching se fait directement dans les Server Components avec async/await.",
     "subjectId": 4
   },
@@ -728,7 +728,7 @@
   {
     "id": 119,
     "label": "Quelle est la différence entre SSR, SSG et ISR dans Next.js ?",
-    "answer": "SSR utilise getServerSideProps pour générer la page à chaque requête.\n<br><br>SSG utilise getStaticProps pour générer la page au moment du build.\n<br><br>ISR est une extension de SSG qui ajoute une régénération automatique des pages après un certain délai grâce à revalidate.",
+    "answer": "SSR (Static Site Renderind) utilise getServerSideProps pour générer la page à chaque requête.\n<br><br>SSG (Static Site Generation) utilise getStaticProps pour générer la page au moment du build.\n<br><br>ISR (Incremental Static Regeneration) est une extension de SSG qui ajoute une régénération automatique des pages après un certain délai grâce à revalidate.",
     "subjectId": 4
   },
   {
