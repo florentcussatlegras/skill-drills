@@ -704,13 +704,13 @@
   {
     "id": 115,
     "label": "Comment faire du SSR (Server-Side Rendering) dans le dossier app avec fetch ?",
-    "answer": "Pour du SSR, on peut utiliser un Server Component async avec fetch et exporter 'export const revalidate = 0;'. La page est générée à chaque requête, garantissant que les données sont toujours fraîches. Exemple :\n\nexport const revalidate = 0;\nexport default async function Page() {\n  const res = await fetch('https://api.example.com/data');\n  const data = await res.json();\n  return <div>{data.title}</div>;\n}",
+    "answer": "<p>Pour faire du <strong>SSR (Server-Side Rendering)</strong> dans le dossier <code>/app</code>, on utilise un <strong>Server Component async</strong> avec <code>fetch</code> et on définit <code>export const revalidate = 0;</code>.</p>\n\n<br><p>La page est générée à chaque requête, garantissant que les données sont toujours fraîches.</p>\n\n<br><p><strong>Exemple :</strong></p>\n\n<br><p><code>export const revalidate = 0;</code><br/>\n<code>export default async function Page() {</code><br/>\n<code>&nbsp;&nbsp;const res = await fetch('https://api.example.com/data');</code><br/>\n<code>&nbsp;&nbsp;const data = await res.json();</code><br/>\n<code>&nbsp;&nbsp;return &lt;div&gt;{data.title}&lt;/div&gt;;</code><br/>\n<code>}</code></p>",
     "subjectId": 4
   },
   {
     "id": 116,
     "label": "Comment faire du SSG (Static Site Generation) dans le dossier app avec fetch ?",
-    "answer": "Pour du SSG, on peut utiliser un Server Component async avec fetch et exporter 'export const revalidate = false;'. La page est générée une seule fois au build et jamais régénérée. Exemple :\n\nexport const revalidate = false;\nexport default async function Page() {\n  const res = await fetch('https://api.example.com/data', { next: { revalidate: false } });\n  const data = await res.json();\n  return <div>{data.title}</div>;\n}",
+    "answer": "<p>Pour faire du <strong>SSG (Static Site Generation)</strong> dans le dossier <code>/app</code>, on utilise un <strong>Server Component async</strong> avec <code>fetch</code> et on définit <code>export const revalidate = false;</code>.</p>\n\n<p>La page est générée une seule fois au build et n’est jamais régénérée.</p>\n\n<p><strong>Exemple :</strong></p>\n\n<p><code>export const revalidate = false;</code><br/>\n<code>export default async function Page() {</code><br/>\n<code>&nbsp;&nbsp;const res = await fetch('https://api.example.com/data', { next: { revalidate: false } });</code><br/>\n<code>&nbsp;&nbsp;const data = await res.json();</code><br/>\n<code>&nbsp;&nbsp;return &lt;div&gt;{data.title}&lt;/div&gt;;</code><br/>\n<code>}</code></p>",
     "subjectId": 4
   },
   {
