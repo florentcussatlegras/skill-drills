@@ -452,7 +452,7 @@
   {
     "id": 78,
     "label": "Qu'est-ce que le middleware dans Next.js ?",
-    "answer": "<p><strong>Middleware</strong> :</p><br /><br />\n<p>Le middleware permet d’exécuter du code avant qu’une requête n’atteigne votre page ou API, pour modifier la réponse, rediriger ou gérer l’authentification.</p><br /><br />\n<p><strong>Exemple :</strong></p><br /><br />\n<p><code>// middleware.ts</code><br />\n<code>import { NextResponse } from 'next/server';</code><br /><br />\n<code>export function middleware(req) {</code><br />\n<code>&nbsp;&nbsp;if (!req.nextUrl.pathname.startsWith('/admin')) return NextResponse.next();</code><br />\n<code>&nbsp;&nbsp;return NextResponse.redirect('/login');</code><br />\n<code>}</code><br /><br />\n<p>➡️ Ici, toute page commençant par <code>/admin</code> redirige vers <code>/login</code> si la condition n’est pas remplie.</p>",
+    "answer": "<p><strong>Middleware</strong> :</p><br />\n<p>Le middleware permet d’exécuter du code avant qu’une requête n’atteigne votre page ou API, pour modifier la réponse, rediriger ou gérer l’authentification.</p><br />\n<p><strong>Exemple :</strong></p><br /><br />\n<p><code>// middleware.ts</code><br />\n<code>import { NextResponse } from 'next/server';</code><br /><br />\n<code>export function middleware(req) {</code><br />\n<code>&nbsp;&nbsp;if (!req.nextUrl.pathname.startsWith('/admin')) return NextResponse.next();</code><br />\n<code>&nbsp;&nbsp;return NextResponse.redirect('/login');</code><br />\n<code>}</code><br />\n<p>➡️ Ici, toute page commençant par <code>/admin</code> redirige vers <code>/login</code> si la condition n’est pas remplie.</p>",
     "subjectId": 4
   },
   {
