@@ -698,7 +698,7 @@
   {
     "id": 114,
     "label": "Quand utiliser un Server Component plutôt qu'un Client Component ?",
-    "answer": "On utilise un Server Component pour le data fetching et la performance, et un Client Component pour les interactions utilisateur.",
+    "answer": "Server Component : data fetching et la performance<br><br>Client Component : interactions utilisateur.",
     "subjectId": 3
   },
   {
