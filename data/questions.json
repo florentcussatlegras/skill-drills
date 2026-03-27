@@ -536,8 +536,7 @@
   {
     "id": 87,
     "label": "Qu'est-ce qu'un Server Component dans Next.js ?",
-    "answer": "Un Server Component est exécuté uniquement côté serveur et ne charge pas de JavaScript côté client.",
-    "subjectId": 4
+    "answer": "<p>Un <strong>Server Component</strong> dans Next.js est un composant React exécuté uniquement côté serveur. Il ne charge pas de JavaScript côté client, ce qui permet d’améliorer les performances et de réduire la taille du bundle envoyé au navigateur.</p>\n\n<p>Il peut accéder directement à des ressources serveur comme une base de données ou une API, sans exposer de données sensibles au client.</p>\n\n<p><strong>Exemple :</strong></p>\n\n<p><code>// app/page.tsx</code><br/>\n<code>export default async function Page() {</code><br/>\n<code>&nbsp;&nbsp;const res = await fetch('https://api.example.com/data');</code><br/>\n<code>&nbsp;&nbsp;const data = await res.json();</code><br/>\n<br/>\n<code>&nbsp;&nbsp;return &lt;div&gt;{data.title}&lt;/div&gt;;</code><br/>\n<code>}</code></p>\n\n<p>Dans cet exemple, le <code>fetch</code> est exécuté côté serveur, et aucun JavaScript supplémentaire n’est envoyé au client.</p>"
   },
   {
     "id": 88,
