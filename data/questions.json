@@ -186,12 +186,6 @@
     "subjectId": 1
   },
   {
-    "id": 30,
-    "label": "Qu'est-ce qu'une promesse en JavaScript ?",
-    "answer": "Une promesse représente la réussite ou l'échec futur d'une opération asynchrone.",
-    "subjectId": 1
-  },
-  {
     "id": 31,
     "label": "Quelle est la différence entre null et undefined ?",
     "answer": "null est une valeur assignée signifiant 'absence de valeur', undefined signifie que la variable n'a pas été initialisée.",
@@ -267,6 +261,12 @@
     "id": 43,
     "label": "Quelle est la différence entre call, apply et bind ?",
     "answer": "<h3>Définition</h3>\n<ul>\n  <li><code>call</code>, <code>apply</code> et <code>bind</code> permettent de définir le <strong>contexte (this)</strong> d’une fonction</li>\n</ul><br>\n\n<h3>Différences principales</h3>\n<ul>\n  <li><strong>call</strong> → exécute immédiatement la fonction avec des arguments séparés</li>\n  <li><strong>apply</strong> → exécute immédiatement la fonction avec des arguments sous forme de tableau</li>\n  <li><strong>bind</strong> → retourne une nouvelle fonction avec le <code>this</code> lié (n’exécute pas immédiatement)</li>\n</ul><br>\n\n<h3>Exemple de code</h3>\n<pre><code>const person = {\n  name: 'Alice'\n};\n\nfunction greet(age, city) {\n  console.log(`Hello, je suis ${this.name}, j'ai ${age} ans et j'habite à ${city}`);\n}\n\n// call\ngreet.call(person, 25, 'Paris');\n\n// apply\ngreet.apply(person, [25, 'Paris']);\n\n// bind\nconst greetAlice = greet.bind(person);\ngreetAlice(25, 'Paris');\n</code></pre><br>\n\n<h3>Résumé</h3>\n<ul>\n  <li><code>call</code> → arguments séparés</li>\n  <li><code>apply</code> → arguments en tableau</li>\n  <li><code>bind</code> → retourne une fonction réutilisable</li>\n</ul>",
+    "subjectId": 1
+  },
+  {
+    "id": 125,
+    "label": "Comment supprimer les doublons d'un tableau en JavaScript ?",
+    "answer": "<h3>Méthode 1 : Utiliser un Set</h3>\n<ul>\n  <li>Un <strong>Set</strong> ne contient que des valeurs uniques</li>\n  <li>On peut convertir un tableau en Set puis revenir en tableau</li>\n</ul>\n<pre><code>const arr = [1, 2, 2, 3, 4, 4];\nconst uniqueArr = [...new Set(arr)];\nconsole.log(uniqueArr); // [1, 2, 3, 4]</code></pre><br>\n\n<h3>Méthode 2 : Utiliser filter et indexOf</h3>\n<pre><code>const arr = [1, 2, 2, 3, 4, 4];\nconst uniqueArr = arr.filter((value, index, self) => self.indexOf(value) === index);\nconsole.log(uniqueArr); // [1, 2, 3, 4]</code></pre><br>\n\n<h3>Méthode 3 : Utiliser reduce</h3>\n<pre><code>const arr = [1, 2, 2, 3, 4, 4];\nconst uniqueArr = arr.reduce((acc, curr) => {\n  if (!acc.includes(curr)) acc.push(curr);\n  return acc;\n}, []);\nconsole.log(uniqueArr); // [1, 2, 3, 4]</code></pre>",
     "subjectId": 1
   },
   {
