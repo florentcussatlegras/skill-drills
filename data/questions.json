@@ -230,7 +230,7 @@
   {
     "id": 37,
     "label": "Qu'est-ce que le hoisting en JavaScript ?",
-    "answer": "Le hoisting déplace les déclarations de variables et fonctions en haut de leur scope lors de l'exécution.",
+    "answer": "<h3>Définition</h3>\n<ul>\n  <li>Le <strong>hoisting</strong> est le comportement par lequel JavaScript <strong>remonte les déclarations</strong> en haut de leur scope lors de l’exécution</li>\n  <li>Seules les <strong>déclarations</strong> sont remontées, pas les initialisations</li>\n</ul><br>\n\n<h3>Exemple avec var</h3>\n<pre><code>console.log(a); // undefined\nvar a = 5;\n</code></pre>\n\n<ul>\n  <li>Interprété comme :</li>\n</ul>\n<pre><code>var a;\nconsole.log(a); // undefined\na = 5;\n</code></pre><br>\n\n<h3>Exemple avec let et const</h3>\n<pre><code>console.log(b); // ReferenceError\nlet b = 10;\n</code></pre>\n\n<ul>\n  <li><code>let</code> et <code>const</code> sont hoistés mais non initialisés</li>\n  <li>Ils sont dans une <strong>zone morte temporaire (TDZ)</strong></li>\n</ul><br>\n\n<h3>Exemple avec fonction</h3>\n<pre><code>sayHello(); // fonctionne\n\nfunction sayHello() {\n  console.log('Hello');\n}\n</code></pre>\n\n<ul>\n  <li>Les <strong>déclarations de fonction</strong> sont entièrement hoistées</li>\n</ul>",
     "subjectId": 1
   },
   {
@@ -254,23 +254,23 @@
   {
     "id": 41,
     "label": "Quelle est la différence entre un objet Set et un tableau ?",
-    "answer": "Un Set est une collection de valeurs uniques, tandis qu'un tableau peut contenir des doublons et est ordonné.",
+    "answer": "<h3>Définition</h3>\n<ul>\n  <li>Un <strong>Set</strong> est une collection de valeurs <strong>uniques</strong></li>\n  <li>Un <strong>tableau (Array)</strong> est une liste ordonnée pouvant contenir des <strong>doublons</strong></li>\n</ul><br>\n\n<h3>Différences principales</h3>\n<ul>\n  <li><strong>Unicité</strong> :\n    <ul>\n      <li>Set → pas de doublons</li>\n      <li>Array → doublons autorisés</li>\n    </ul>\n  </li>\n  <li><strong>Accès</strong> :\n    <ul>\n      <li>Set → pas d’index direct</li>\n      <li>Array → accès via index (ex: arr[0])</li>\n    </ul>\n  </li>\n  <li><strong>Méthodes</strong> :\n    <ul>\n      <li>Set → add(), delete(), has()</li>\n      <li>Array → push(), pop(), map(), filter()</li>\n    </ul>\n  </li>\n</ul><br>\n\n<h3>Exemple de code</h3>\n<pre><code>// Array\nconst arr = [1, 2, 2, 3];\nconsole.log(arr); // [1, 2, 2, 3]\n\n// Set\nconst set = new Set([1, 2, 2, 3]);\nconsole.log(set); // Set {1, 2, 3}\n</code></pre><br>\n\n<h3>Conversion</h3>\n<pre><code>// Supprimer les doublons d’un tableau\nconst unique = [...new Set(arr)];\nconsole.log(unique); // [1, 2, 3]\n</code></pre>",
     "subjectId": 1
   },
   {
     "id": 42,
     "label": "Qu'est-ce que l'Event Loop ?",
-    "answer": "L'Event Loop gère l'exécution des callbacks et des promesses, permettant à JavaScript d'être non bloquant.",
+    "answer": "<h3>Définition</h3>\n<ul>\n  <li>L'<strong>Event Loop</strong> est le mécanisme qui permet à JavaScript d’être <strong>non bloquant</strong></li>\n  <li>Il gère l’exécution des <strong>callbacks</strong>, des <strong>promises</strong> et des tâches asynchrones</li>\n  <li>Il surveille la <strong>call stack</strong> et la <strong>queue</strong> (file d’attente)</li>\n</ul><br>\n\n<h3>Fonctionnement simplifié</h3>\n<ul>\n  <li>Le code synchrone est exécuté en premier (call stack)</li>\n  <li>Les tâches asynchrones sont envoyées dans des files d’attente (callbacks, microtasks)</li>\n  <li>L’Event Loop exécute ces tâches quand la stack est vide</li>\n</ul><br>\n\n<h3>Exemple de code</h3>\n<pre><code>console.log('1');\n\nsetTimeout(() => {\n  console.log('2');\n}, 0);\n\nPromise.resolve().then(() => {\n  console.log('3');\n});\n\nconsole.log('4');\n</code></pre>\n\n<h3>Résultat</h3>\n<pre><code>1\n4\n3\n2\n</code></pre>\n\n<ul>\n  <li><code>1</code> et <code>4</code> → code synchrone</li>\n  <li><code>3</code> → microtask (Promise, prioritaire)</li>\n  <li><code>2</code> → macrotask (setTimeout)</li>\n</ul>",
     "subjectId": 1
   },
   {
     "id": 43,
     "label": "Quelle est la différence entre call, apply et bind ?",
-    "answer": "call et apply invoquent immédiatement la fonction avec un contexte, bind retourne une nouvelle fonction liée au contexte.",
+    "answer": "<h3>Définition</h3>\n<ul>\n  <li><code>call</code>, <code>apply</code> et <code>bind</code> permettent de définir le <strong>contexte (this)</strong> d’une fonction</li>\n</ul><br>\n\n<h3>Différences principales</h3>\n<ul>\n  <li><strong>call</strong> → exécute immédiatement la fonction avec des arguments séparés</li>\n  <li><strong>apply</strong> → exécute immédiatement la fonction avec des arguments sous forme de tableau</li>\n  <li><strong>bind</strong> → retourne une nouvelle fonction avec le <code>this</code> lié (n’exécute pas immédiatement)</li>\n</ul><br>\n\n<h3>Exemple de code</h3>\n<pre><code>const person = {\n  name: 'Alice'\n};\n\nfunction greet(age, city) {\n  console.log(`Hello, je suis ${this.name}, j'ai ${age} ans et j'habite à ${city}`);\n}\n\n// call\ngreet.call(person, 25, 'Paris');\n\n// apply\ngreet.apply(person, [25, 'Paris']);\n\n// bind\nconst greetAlice = greet.bind(person);\ngreetAlice(25, 'Paris');\n</code></pre><br>\n\n<h3>Résumé</h3>\n<ul>\n  <li><code>call</code> → arguments séparés</li>\n  <li><code>apply</code> → arguments en tableau</li>\n  <li><code>bind</code> → retourne une fonction réutilisable</li>\n</ul>",
     "subjectId": 1
   },
   {
-    "id": 43,
+    "id": 125,
     "label": "Qu'est-ce que React ?",
     "answer": "React est une bibliothèque JavaScript pour construire des interfaces utilisateur.",
     "subjectId": 3
