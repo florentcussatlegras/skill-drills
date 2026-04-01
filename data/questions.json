@@ -700,5 +700,23 @@
     "label": "Pourquoi j'aime Symfony plutôt qu’un autre framework ?",
     "answer": "<h3>1. Robustesse et stabilité</h3>\n<ul>\n  <li>Framework éprouvé utilisé par de grandes entreprises</li>\n  <li>Versions LTS garantissant un support long terme</li>\n  <li>Idéal pour des projets critiques et durables</li>\n</ul><br>\n\n<h3>2. Composants réutilisables</h3>\n<ul>\n  <li>Architecture basée sur des composants indépendants</li>\n  <li>Réutilisables dans d’autres projets ou frameworks</li>\n  <li>Gage de qualité et de modularité</li>\n</ul><br>\n\n<h3>3. Flexibilité et architecture</h3>\n<ul>\n  <li>Respect strict du pattern MVC</li>\n  <li>Encourage les bonnes pratiques (DI, séparation des responsabilités)</li>\n  <li>Adapté aux projets complexes</li>\n</ul><br>\n\n<h3>4. Communauté et documentation</h3>\n<ul>\n  <li>Documentation claire et très complète</li>\n  <li>Grande communauté active</li>\n  <li>Facilite l’apprentissage et la résolution de problèmes</li>\n</ul><br>\n\n<h3>5. Écosystème professionnel</h3>\n<ul>\n  <li>Outils comme Symfony Flex et Symfony Cloud</li>\n  <li>Bonne intégration avec les outils modernes</li>\n  <li>Adapté aux environnements professionnels</li>\n</ul><br>\n\n<h3>6. Performance et scalabilité</h3>\n<ul>\n  <li>Architecture modulaire évitant les surcharges inutiles</li>\n  <li>Optimisable selon les besoins du projet</li>\n  <li>Convient aux applications à fort trafic</li>\n</ul><br>\n\n<h3>7. Sécurité</h3>\n<ul>\n  <li>Fonctionnalités de sécurité intégrées (CSRF, authentification, etc.)</li>\n  <li>Bonnes pratiques natives</li>\n  <li>Adapté aux applications sensibles</li>\n</ul>",
     "subjectId": 6
+  },
+  {
+    "id": 122,
+    "label": "Que renvoie un fetch en JavaScript ?",
+    "answer": "<h3>Retour de <code>fetch()</code></h3>\n<ul>\n  <li><code>fetch()</code> renvoie une <strong>Promise</strong></li>\n  <li>Cette Promise résout vers un objet <strong>Response</strong></li>\n  <li>Elle ne contient pas directement les données (JSON, texte...)</li>\n</ul><br>\n\n<h3>Exemple</h3>\n<pre><code>fetch('https://api.example.com/data')\n  .then(response => response.json())\n  .then(data => console.log(data));\n</code></pre>\n\n<ul>\n  <li>On doit appeler <code>.json()</code>, <code>.text()</code>, etc. pour lire le contenu</li>\n</ul>",
+    "subjectId": 1
+  },
+  {
+    "id": 123,
+    "label": "Qu'est-ce qu'un objet Response en JavaScript ?",
+    "answer": "<h3>Définition</h3>\n<ul>\n  <li><strong>Response</strong> est un objet retourné par <code>fetch()</code></li>\n  <li>Il représente la réponse HTTP reçue</li>\n</ul><br>\n\n<h3>Contenu</h3>\n<ul>\n  <li><code>status</code> → code HTTP (200, 404...)</li>\n  <li><code>ok</code> → booléen (true si status 200-299)</li>\n  <li><code>headers</code> → en-têtes HTTP</li>\n  <li><code>body</code> → flux de données</li>\n</ul><br>\n\n<h3>Méthodes utiles</h3>\n<ul>\n  <li><code>response.json()</code> → convertit en JSON</li>\n  <li><code>response.text()</code> → texte brut</li>\n  <li><code>response.blob()</code> → données binaires</li>\n</ul>",
+    "subjectId": 1
+  },
+  {
+    "id": 124,
+    "label": "Qu'est-ce qu'une Promise en JavaScript ?",
+    "answer": "<h3>Définition</h3>\n<ul>\n  <li>Une <strong>Promise</strong> est un objet représentant une valeur future</li>\n  <li>Elle est utilisée pour gérer l’asynchrone</li>\n</ul><br>\n\n<h3>États d'une Promise</h3>\n<ul>\n  <li><strong>pending</strong> → en attente</li>\n  <li><strong>fulfilled</strong> → réussie</li>\n  <li><strong>rejected</strong> → échouée</li>\n</ul><br>\n\n<h3>Utilisation</h3>\n<pre><code>fetch('https://api.example.com')\n  .then(response => response.json())\n  .then(data => console.log(data))\n  .catch(error => console.error(error));\n</code></pre>\n\n<ul>\n  <li><code>.then()</code> → quand la Promise réussit</li>\n  <li><code>.catch()</code> → en cas d'erreur</li>\n</ul>",
+    "subjectId": 1
   }
 ]
