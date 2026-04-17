@@ -28,5 +28,10 @@
     "id": 6,
     "name": "Symfony",
     "logo": "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/symfony.svg"
+  },
+  {
+    "id": 7,
+    "name": "Angular",
+    "logo": "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/angular.svg"
   }
 ]
